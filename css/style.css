@@ -1,9 +1,37 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("../font/subset-OpenSans-Regular.woff2") format("woff2"), url("../font/subset-OpenSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans-bold";
+  src: url("../font/subset-OpenSans-Bold.woff2") format("woff2"), url("../font/subset-OpenSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-p {
-  font-size: 80px;
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+.head__box {
+  background-image: url("../img/hero-img-small.jpg"), linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
+  height: 75vh;
+  background-size: cover;
+  background-position: 45% 20%;
 }/*# sourceMappingURL=style.css.map */

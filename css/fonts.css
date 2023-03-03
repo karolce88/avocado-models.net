@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Open Sans-bold";
+  src: url("../font/subset-OpenSans-Bold.woff2") format("woff2"), url("../font/subset-OpenSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../font/subset-OpenSans-Regular.woff2") format("woff2"), url("../font/subset-OpenSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}/*# sourceMappingURL=fonts.css.map */

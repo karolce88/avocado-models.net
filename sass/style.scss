@@ -1,9 +1,30 @@
+@use './fonts' as *;
+@use './colors' as *;
+@use './components' as *;
+
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
 
-p {
-    font-size: 80px;
+body {
+	font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
 }
+
+.head__box {
+    background-image: url('../img/hero-img-small.jpg'), linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
+    height: 75vh;
+    background-size: cover;
+    background-position: 45% 20%;
+}
+
+
+
+/// MEDIA
+
+@media (min-width: 576px) {
+
+}
+
