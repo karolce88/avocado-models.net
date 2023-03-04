@@ -18,7 +18,16 @@
   max-width: 1200px;
 }
 
-* {
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+*,
+::after,
+::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -29,9 +38,87 @@ body {
   font-weight: 400;
 }
 
-.head__box {
-  background-image: url("../img/hero-img-small.jpg"), linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
+.header .head-box {
+  position: relative;
+  background-image: url("../img/hero-img-small.jpg");
   height: 75vh;
   background-size: cover;
-  background-position: 45% 20%;
+  background-position: center;
+}
+.header .head-box::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 46, 46, 0.521);
+}
+.header .head-box__text {
+  width: 300px;
+  display: flex;
+  z-index: 1;
+  flex-direction: column;
+  align-items: center;
+}
+.header .head-box__text h1 {
+  font-size: 28px;
+  padding-bottom: 10px;
+  color: #fff;
+  letter-spacing: 5px;
+  font-family: "Open Sans-bold";
+  font-weight: bold;
+}
+.header .head-box__text span {
+  color: #56f000;
+}
+.header .head-box__text p {
+  color: #fff;
+  padding-bottom: 45px;
+  letter-spacing: 3px;
+  font-size: 18px;
+}
+.header .head-box__text .btn-cta {
+  position: relative;
+  border: 3px solid #9A00F0;
+  background-color: transparent;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  overflow: hidden;
+  z-index: 0;
+}
+.header .head-box__text .btn-cta::after,
+.header .head-box__text .btn-cta::before {
+  content: "";
+  position: absolute;
+  width: 77px;
+  top: -7px;
+  left: 0px;
+  height: 55px;
+  background-color: #9A00F0;
+  z-index: -1;
+  transition: all 0.3s;
+}
+.header .head-box__text .btn-cta::before {
+  left: 74px;
+}
+.header .head-box__text .btn-cta:hover::before {
+  left: 155px;
+}
+.header .head-box__text .btn-cta:hover::after {
+  left: -84px;
+}
+
+@media (min-width: 768px) {
+  .header .head-box {
+    background-image: url("../img/hero-img-big.jpg");
+  }
+  .header .head-box__text {
+    width: 400px;
+  }
+  .header .head-box__text h1 {
+    font-size: 36px;
+  }
 }/*# sourceMappingURL=style.css.map */
