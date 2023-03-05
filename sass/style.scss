@@ -27,7 +27,7 @@ body {
 	.wrapper {
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		justify-content: space-between;
 
 		.logo {
 			width: 180px;
@@ -36,14 +36,24 @@ body {
 			&__logo-item {
 				width: 180px;
 				height: 45px;
+				padding: 5px 20px;
 			}
+		}
+
+		.burger-button {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: #b80000;
+			width: 30px;
+			height: 30px;
 		}
 
 		.nav {
 			&__box {
 				display: flex;
 				justify-content: flex-end;
-				width: 80%;
+				width: 70%;
 			}
 
 			&__items {
@@ -107,6 +117,18 @@ body {
 	}
 }
 
+.nav {
+	.nav__items {
+		display: none;
+		opacity: 0;
+	}
+
+	.burger-button {
+		display: block;
+		opacity: 1;
+	}
+}
+
 .header {
 	.head-box {
 		position: relative;
@@ -146,7 +168,7 @@ body {
 			p {
 				color: $pure-white;
 				padding-bottom: 45px;
-				letter-spacing: 3px;
+				letter-spacing: 1px;
 				font-size: 18px;
 			}
 
@@ -195,9 +217,35 @@ body {
 /// MEDIA
 
 @media (min-width: 576px) {
+
+	.nav {
+		.nav__items {
+			display: none;
+			opacity: 0;
+		}
+
+		.burger-button {
+			display: block;
+			opacity: 1;
+		}
+	}
+
 }
 
 @media (min-width: 768px) {
+
+	.nav {
+		.nav__items {
+			display: none;
+			opacity: 0;
+		}
+
+		.burger-button {
+			display: block;
+			opacity: 1;
+		}
+	}
+
 	.header {
 		.head-box {
 			background-image: url('../img/hero-img-big.jpg');
@@ -214,6 +262,17 @@ body {
 }
 
 @media (min-width: 992px) {
+	.nav {
+		.nav__items {
+			display: block;
+			opacity: 1;
+		}
+
+		.burger-button {
+			display: none;
+			opacity: 0;
+		}
+	}
 }
 
 @media (min-width: 1200px) {

@@ -50,7 +50,7 @@ body {
 .nav .wrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 .nav .wrapper .logo {
   width: 180px;
@@ -59,11 +59,20 @@ body {
 .nav .wrapper .logo__logo-item {
   width: 180px;
   height: 45px;
+  padding: 5px 20px;
+}
+.nav .wrapper .burger-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #b80000;
+  width: 30px;
+  height: 30px;
 }
 .nav .wrapper .nav__box {
   display: flex;
   justify-content: flex-end;
-  width: 80%;
+  width: 70%;
 }
 .nav .wrapper .nav__items {
   display: flex;
@@ -117,6 +126,15 @@ body {
   font-size: 18px;
 }
 
+.nav .nav__items {
+  display: none;
+  opacity: 0;
+}
+.nav .burger-button {
+  display: block;
+  opacity: 1;
+}
+
 .header .head-box {
   position: relative;
   background-image: url("../img/hero-img-small.jpg");
@@ -152,7 +170,7 @@ body {
 .header .head-box__text p {
   color: #fff;
   padding-bottom: 45px;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   font-size: 18px;
 }
 .header .head-box__text .btn-cta {
@@ -190,7 +208,25 @@ body {
   left: -84px;
 }
 
+@media (min-width: 576px) {
+  .nav .nav__items {
+    display: none;
+    opacity: 0;
+  }
+  .nav .burger-button {
+    display: block;
+    opacity: 1;
+  }
+}
 @media (min-width: 768px) {
+  .nav .nav__items {
+    display: none;
+    opacity: 0;
+  }
+  .nav .burger-button {
+    display: block;
+    opacity: 1;
+  }
   .header .head-box {
     background-image: url("../img/hero-img-big.jpg");
   }
@@ -199,5 +235,15 @@ body {
   }
   .header .head-box__text h1 {
     font-size: 36px;
+  }
+}
+@media (min-width: 992px) {
+  .nav .nav__items {
+    display: block;
+    opacity: 1;
+  }
+  .nav .burger-button {
+    display: none;
+    opacity: 0;
   }
 }/*# sourceMappingURL=style.css.map */
