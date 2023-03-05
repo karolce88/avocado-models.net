@@ -61,6 +61,14 @@ body {
 		background-size: cover;
 		background-position: center;
 
+		&::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: $black-bgc;
+		}
+
 		&__text {
 			width: 300px;
 			display: flex;
