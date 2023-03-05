@@ -24,6 +24,10 @@ body {
 	box-shadow: 0px 12px 10px -16px #111;
 	z-index: 1000;
 
+	.nav__items {
+		display: none;
+	}
+
 	.wrapper {
 		display: flex;
 		align-items: center;
@@ -41,91 +45,11 @@ body {
 		}
 
 		.burger-button {
-			display: flex;
-			align-items: center;
-			justify-content: center;
+			margin-right: 20px;
 			background-color: #b80000;
-			width: 30px;
-			height: 30px;
+			width: 40px;
+			height: 40px;
 		}
-
-		.nav {
-			&__box {
-				display: flex;
-				justify-content: flex-end;
-				width: 70%;
-			}
-
-			&__items {
-				display: flex;
-				align-items: center;
-				list-style: none;
-				height: 50px;
-
-				.btn1 {
-					position: relative;
-					overflow: hidden;
-					z-index: 1;
-					border-radius: 7px;
-					margin: 0 8px;
-				}
-
-				.btn1::before,
-				.btn1::after {
-					position: absolute;
-					content: '';
-					background-color: $main-green;
-					width: 55%;
-					top: -2px;
-					height: 115%;
-					transition: all 0.3s;
-					z-index: -1;
-				}
-
-				.btn1::before {
-					left: -56%;
-				}
-				.btn1::after {
-					left: 101%;
-				}
-
-				.btn1:hover::before {
-					left: 0%;
-					color: $pure-white;
-				}
-				.btn1:hover::after {
-					left: 50%;
-					color: $pure-white;
-				}
-			}
-
-			&__item {
-				display: flex;
-				align-items: center;
-				letter-spacing: 2px;
-				text-transform: uppercase;
-				height: 32px;
-
-				a {
-					padding: 8px 15px;
-					text-decoration: none;
-					color: $black-text;
-					font-size: 18px;
-				}
-			}
-		}
-	}
-}
-
-.nav {
-	.nav__items {
-		display: none;
-		opacity: 0;
-	}
-
-	.burger-button {
-		display: block;
-		opacity: 1;
 	}
 }
 
@@ -136,14 +60,6 @@ body {
 		height: 75vh;
 		background-size: cover;
 		background-position: center;
-
-		&::after {
-			content: '';
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			background-color: $black-bgc;
-		}
 
 		&__text {
 			width: 300px;
@@ -217,35 +133,9 @@ body {
 /// MEDIA
 
 @media (min-width: 576px) {
-
-	.nav {
-		.nav__items {
-			display: none;
-			opacity: 0;
-		}
-
-		.burger-button {
-			display: block;
-			opacity: 1;
-		}
-	}
-
 }
 
 @media (min-width: 768px) {
-
-	.nav {
-		.nav__items {
-			display: none;
-			opacity: 0;
-		}
-
-		.burger-button {
-			display: block;
-			opacity: 1;
-		}
-	}
-
 	.header {
 		.head-box {
 			background-image: url('../img/hero-img-big.jpg');
@@ -263,14 +153,81 @@ body {
 
 @media (min-width: 992px) {
 	.nav {
-		.nav__items {
-			display: block;
-			opacity: 1;
-		}
+		position: sticky;
+		top: 0px;
+		height: 50px;
+		background: $light-white;
+		box-shadow: 0px 12px 10px -16px #111;
+		z-index: 1000;
 
-		.burger-button {
-			display: none;
-			opacity: 0;
+		.wrapper {
+			.burger-button {
+				display: none;
+			}
+
+			.nav {
+				&__box {
+					display: flex;
+					justify-content: flex-end;
+					width: 70%;
+				}
+
+				&__items {
+					display: flex;
+					align-items: center;
+					list-style: none;
+					flex-wrap: wrap;
+					height: 50px;
+
+					.btn {
+						position: relative;
+						z-index: 1;
+						border-radius: 7px;
+						margin: 0 8px;
+					}
+
+					.btn::before {
+						position: absolute;
+						content: '';
+						background-color: $main-green;
+						width: 100%;
+						bottom: 0px;
+						height: 0px;
+						transition: all 0.4s;
+						z-index: -1;
+						border-radius: 5px;
+					}
+
+					.btn1::before {
+						background-color: $CTA;
+						height: 3px;
+					}
+
+					.btn1:hover a {
+						color: $pure-white;
+						
+					}
+
+					.btn:hover::before {
+						height: 100%;
+					}
+				}
+
+				&__item {
+					display: flex;
+					align-items: center;
+					letter-spacing: 2px;
+					text-transform: uppercase;
+					height: 32px;
+
+					a {
+						padding: 8px 15px;
+						text-decoration: none;
+						color: $black-text;
+						font-size: 18px;
+					}
+				}
+			}
 		}
 	}
 }
