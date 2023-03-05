@@ -13,6 +13,98 @@
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
+	background-color: $light-white;
+}
+
+.nav {
+	position: sticky;
+	top: 0px;
+	height: 50px;
+	background: $light-white;
+	box-shadow: 0px 12px 10px -16px #111;
+	z-index: 1000;
+
+	.wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.logo {
+			width: 180px;
+			height: 45px;
+
+			&__logo-item {
+				width: 180px;
+				height: 45px;
+			}
+		}
+
+		.nav {
+			&__box {
+				display: flex;
+				justify-content: flex-end;
+				width: 80%;
+			}
+
+			&__items {
+				display: flex;
+				align-items: center;
+				list-style: none;
+				height: 50px;
+
+				.btn1 {
+					position: relative;
+					overflow: hidden;
+					z-index: 1;
+					border-radius: 7px;
+					margin: 0 8px;
+				}
+
+				.btn1::before,
+				.btn1::after {
+					position: absolute;
+					content: '';
+					background-color: $main-green;
+					width: 55%;
+					top: -2px;
+					height: 115%;
+					transition: all 0.3s;
+					z-index: -1;
+				}
+
+				.btn1::before {
+					left: -56%;
+				}
+				.btn1::after {
+					left: 101%;
+				}
+
+				.btn1:hover::before {
+					left: 0%;
+					color: $pure-white;
+				}
+				.btn1:hover::after {
+					left: 50%;
+					color: $pure-white;
+				}
+			}
+
+			&__item {
+				display: flex;
+				align-items: center;
+				letter-spacing: 2px;
+				text-transform: uppercase;
+				height: 32px;
+
+				a {
+					padding: 8px 15px;
+					text-decoration: none;
+					color: $black-text;
+					font-size: 18px;
+				}
+			}
+		}
+	}
 }
 
 .header {
@@ -60,44 +152,42 @@ body {
 
 			.btn-cta {
 				position: relative;
-                border: 3px solid $CTA;
-                background-color: transparent;
+				border: 3px solid $CTA;
+				background-color: transparent;
 				border-radius: 8px;
 				padding: 12px 24px;
 				cursor: pointer;
 				color: $pure-white;
 				text-transform: uppercase;
 				letter-spacing: 1px;
-                overflow: hidden;
-                z-index: 0;
-                
+				overflow: hidden;
+				z-index: 0;
 			}
 
-            .btn-cta::after,
-            .btn-cta::before {
-                content: '';
-                position: absolute;
-                width: 77px;
-                top: -7px;
-                left: 0px;
-                height: 55px;
-                background-color: $CTA;
-                z-index: -1;
-                transition: all .3s;
-            }
+			.btn-cta::after,
+			.btn-cta::before {
+				content: '';
+				position: absolute;
+				width: 77px;
+				top: -7px;
+				left: 0px;
+				height: 55px;
+				background-color: $CTA;
+				z-index: -1;
+				transition: all 0.3s;
+			}
 
-            .btn-cta::before {
-                left: 74px;
-            }
+			.btn-cta::before {
+				left: 74px;
+			}
 
-            .btn-cta:hover::before {
-                left: 155px;
-            }
+			.btn-cta:hover::before {
+				left: 155px;
+			}
 
-            .btn-cta:hover::after {
-                left: -84px;
-            }
-
+			.btn-cta:hover::after {
+				left: -84px;
+			}
 		}
 	}
 }

@@ -36,6 +36,85 @@
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
+  background-color: #eee;
+}
+
+.nav {
+  position: sticky;
+  top: 0px;
+  height: 50px;
+  background: #eee;
+  box-shadow: 0px 12px 10px -16px #111;
+  z-index: 1000;
+}
+.nav .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav .wrapper .logo {
+  width: 180px;
+  height: 45px;
+}
+.nav .wrapper .logo__logo-item {
+  width: 180px;
+  height: 45px;
+}
+.nav .wrapper .nav__box {
+  display: flex;
+  justify-content: flex-end;
+  width: 80%;
+}
+.nav .wrapper .nav__items {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  height: 50px;
+}
+.nav .wrapper .nav__items .btn1 {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 7px;
+  margin: 0 8px;
+}
+.nav .wrapper .nav__items .btn1::before,
+.nav .wrapper .nav__items .btn1::after {
+  position: absolute;
+  content: "";
+  background-color: #56f000;
+  width: 55%;
+  top: -2px;
+  height: 115%;
+  transition: all 0.3s;
+  z-index: -1;
+}
+.nav .wrapper .nav__items .btn1::before {
+  left: -56%;
+}
+.nav .wrapper .nav__items .btn1::after {
+  left: 101%;
+}
+.nav .wrapper .nav__items .btn1:hover::before {
+  left: 0%;
+  color: #fff;
+}
+.nav .wrapper .nav__items .btn1:hover::after {
+  left: 50%;
+  color: #fff;
+}
+.nav .wrapper .nav__item {
+  display: flex;
+  align-items: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  height: 32px;
+}
+.nav .wrapper .nav__item a {
+  padding: 8px 15px;
+  text-decoration: none;
+  color: #585658;
+  font-size: 18px;
 }
 
 .header .head-box {
@@ -50,7 +129,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(46, 46, 46, 0.521);
+  background-color: rgba(46, 46, 46, 0.582);
 }
 .header .head-box__text {
   width: 300px;
