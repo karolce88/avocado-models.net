@@ -32,6 +32,7 @@ body {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		height: 50px;
 
 		.logo {
 			width: 180px;
@@ -45,10 +46,55 @@ body {
 		}
 
 		.burger-button {
+			display: flex;
 			margin-right: 20px;
-			background-color: #b80000;
-			width: 40px;
-			height: 40px;
+			min-width: 45px;
+			min-height: 45px;
+			cursor: pointer;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.container-btn {
+				position: relative;
+				width: 25px;
+				height: 25px;
+
+				.brg {
+					position: absolute;
+					width: 25px;
+					height: 3px;
+					background-color: $black-text;
+					border-radius: 2px;
+				}
+
+				.item2 {
+					top: 11px;
+				}
+
+				.item3 {
+					top: 22px;
+				}
+
+				.item2-display-none {
+					display: none;
+				}
+
+				.item1-rotate {
+					transform: rotate(45deg);
+					transform-origin: -5% 220%;
+				}
+
+				.item3-rotate {
+					transform: rotate(-45deg);
+					transform-origin: -2% -110%;
+				}
+			}
+		}
+
+		.container-btn-border {
+			border: 3px solid $black-text;
+			border-radius: 5px;
 		}
 	}
 }
@@ -201,7 +247,7 @@ body {
 						width: 100%;
 						bottom: 0px;
 						height: 0px;
-						transition: all 0.4s;
+						transition: height 0.4s, color 0.1s;
 						z-index: -1;
 						border-radius: 5px;
 					}
@@ -213,7 +259,6 @@ body {
 
 					.btn1:hover a {
 						color: $pure-white;
-						
 					}
 
 					.btn:hover::before {

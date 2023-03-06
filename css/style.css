@@ -54,6 +54,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 50px;
 }
 .nav .wrapper .logo {
   width: 180px;
@@ -65,10 +66,47 @@ body {
   padding: 5px 20px;
 }
 .nav .wrapper .burger-button {
+  display: flex;
   margin-right: 20px;
-  background-color: #b80000;
-  width: 40px;
-  height: 40px;
+  min-width: 45px;
+  min-height: 45px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav .wrapper .burger-button .container-btn {
+  position: relative;
+  width: 25px;
+  height: 25px;
+}
+.nav .wrapper .burger-button .container-btn .brg {
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background-color: #585658;
+  border-radius: 2px;
+}
+.nav .wrapper .burger-button .container-btn .item2 {
+  top: 11px;
+}
+.nav .wrapper .burger-button .container-btn .item3 {
+  top: 22px;
+}
+.nav .wrapper .burger-button .container-btn .item2-display-none {
+  display: none;
+}
+.nav .wrapper .burger-button .container-btn .item1-rotate {
+  transform: rotate(45deg);
+  transform-origin: -5% 220%;
+}
+.nav .wrapper .burger-button .container-btn .item3-rotate {
+  transform: rotate(-45deg);
+  transform-origin: -2% -110%;
+}
+.nav .wrapper .container-btn-border {
+  border: 3px solid #585658;
+  border-radius: 5px;
 }
 
 .header .head-box {
@@ -192,7 +230,7 @@ body {
     width: 100%;
     bottom: 0px;
     height: 0px;
-    transition: all 0.4s;
+    transition: height 0.4s, color 0.1s;
     z-index: -1;
     border-radius: 5px;
   }
