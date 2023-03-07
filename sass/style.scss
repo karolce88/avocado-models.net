@@ -50,10 +50,16 @@ body {
 			margin-right: 20px;
 			min-width: 45px;
 			min-height: 45px;
+			text-decoration: none;
 			cursor: pointer;
 			display: flex;
 			justify-content: center;
 			align-items: center;
+
+			button:focus {
+				outline: none;
+				color: white;
+			}
 
 			.container-btn {
 				position: relative;
