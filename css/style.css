@@ -167,6 +167,9 @@ body {
 .nav .wrapper .burger-button .container-btn .item3-rotate-rev {
   animation: animation-btn3-rev 0.4s ease-in forwards;
 }
+.nav .wrapper .burger-button:focus {
+  outline: none;
+}
 .nav .wrapper .container-btn-border {
   border: 2px solid #585658;
   border-radius: 5px;
@@ -192,13 +195,13 @@ body {
   flex-direction: column;
   justify-content: space-between;
   list-style: none;
-  padding: 20px;
-  height: 400px;
+  padding: 50px;
+  height: 350px;
 }
 .nav .mobile-nav .mobile-nav-container .mobile-nav-items .mob-nav-item {
   display: flex;
   justify-content: center;
-  font-size: 26px;
+  font-size: 24px;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
