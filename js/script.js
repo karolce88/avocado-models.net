@@ -4,9 +4,12 @@ const itemFirst = document.querySelector('.item1')
 const itemThree = document.querySelector('.item3')
 const btnAnimDelay = document.querySelector('.burger-button')
 const mobileNav = document.querySelector('.mobile-nav-container')
+const mobileNavText = document.querySelector('.mobile-nav-items')
+
 
 
 function btnClick() {
+
 	if (
 		itemTwo.classList.contains('item2-display-none') &&
 		itemFirst.classList.contains('item1-rotate') &&
@@ -22,6 +25,9 @@ function btnClick() {
         burgerBtn.classList.remove('container-btn-border')
 
         mobileNav.classList.add('mobile-nav-container-show-rev')
+
+        mobileNavText.classList.remove('aanimation')
+
 	} else if (
 		itemTwo.classList.contains('item2-display-none-rev') &&
 		itemFirst.classList.contains('item1-rotate-rev') &&
@@ -38,6 +44,9 @@ function btnClick() {
 
         mobileNav.classList.remove('mobile-nav-container-show-rev')
         mobileNav.classList.add('mobile-nav-container-show')
+
+        mobileNavText.classList.add('aanimation')
+
 	} else {
 		itemTwo.classList.add('item2-display-none')
 		itemFirst.classList.add('item1-rotate')
@@ -45,7 +54,13 @@ function btnClick() {
 		burgerBtn.classList.add('container-btn-border')
 
         mobileNav.classList.add('mobile-nav-container-show')
+
+        mobileNavText.classList.add('aanimation')
 	}
 }
 
+
+
 burgerBtn.addEventListener('click', btnClick)
+burgerBtn.addEventListener('click', handleNavItemsAnimation)
+

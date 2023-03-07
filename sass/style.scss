@@ -135,6 +135,8 @@ body {
 				list-style: none;
 				padding: 50px;
 				height: 350px;
+				position: relative;
+				right: -500%;
 
 				.mob-nav-item {
 					display: flex;
@@ -142,13 +144,19 @@ body {
 					font-size: 24px;
 					letter-spacing: 2px;
 					text-transform: uppercase;
-
-					a {
+					
+					.text-menu-anim {
 						color: $black-text;
 						text-decoration: none;
 					}
+
 				}
+
 			}
+
+			.git  {
+				@include mobile-menu-text;
+			}	
 		}
 
 		.mobile-nav-container-show {
