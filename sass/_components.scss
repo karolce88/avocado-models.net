@@ -79,7 +79,7 @@
 }
 
 @mixin anim-btn3-rev {
-	animation: animation-btn3-rev .4s ease-in forwards ;
+	animation: animation-btn3-rev .4s ease-in forwards;
 }
 @keyframes animation-btn3-rev {
 	from {
@@ -88,5 +88,33 @@
 	}
 	to {
 
+	}
+}
+
+// mobile menu anim:
+
+@mixin mobile-menu-anim {
+	animation: animation-menu .8s ease forwards;
+}
+
+@keyframes animation-menu {
+	from {
+		right: -110%;
+	}
+	to {
+		right: 0%;
+	}
+}
+
+@mixin mobile-menu-anim-rev {
+	animation: animation-menu-rev .8s ease forwards;
+}
+
+@keyframes animation-menu-rev {
+	from {
+		right: 0%;
+	}
+	to {
+		right: -110%;
 	}
 }

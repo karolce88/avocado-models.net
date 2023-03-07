@@ -3,6 +3,8 @@ const itemTwo = document.querySelector('.item2')
 const itemFirst = document.querySelector('.item1')
 const itemThree = document.querySelector('.item3')
 const btnAnimDelay = document.querySelector('.burger-button')
+const mobileNav = document.querySelector('.mobile-nav-container')
+
 
 function btnClick() {
 	if (
@@ -18,6 +20,8 @@ function btnClick() {
 		itemFirst.classList.add('item1-rotate-rev')
 		itemThree.classList.add('item3-rotate-rev')
         burgerBtn.classList.remove('container-btn-border')
+
+        mobileNav.classList.add('mobile-nav-container-show-rev')
 	} else if (
 		itemTwo.classList.contains('item2-display-none-rev') &&
 		itemFirst.classList.contains('item1-rotate-rev') &&
@@ -31,11 +35,16 @@ function btnClick() {
 		itemFirst.classList.add('item1-rotate')
 		itemThree.classList.add('item3-rotate')
         burgerBtn.classList.add('container-btn-border')
+
+        mobileNav.classList.remove('mobile-nav-container-show-rev')
+        mobileNav.classList.add('mobile-nav-container-show')
 	} else {
 		itemTwo.classList.add('item2-display-none')
 		itemFirst.classList.add('item1-rotate')
 		itemThree.classList.add('item3-rotate')
 		burgerBtn.classList.add('container-btn-border')
+
+        mobileNav.classList.add('mobile-nav-container-show')
 	}
 }
 
