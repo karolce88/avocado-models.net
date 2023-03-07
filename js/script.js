@@ -17,8 +17,8 @@ function btnClick() {
 		itemTwo.classList.add('item2-display-none-rev')
 		itemFirst.classList.add('item1-rotate-rev')
 		itemThree.classList.add('item3-rotate-rev')
-	}
-	else if (
+        burgerBtn.classList.remove('container-btn-border')
+	} else if (
 		itemTwo.classList.contains('item2-display-none-rev') &&
 		itemFirst.classList.contains('item1-rotate-rev') &&
 		itemThree.classList.contains('item3-rotate-rev')
@@ -30,11 +30,12 @@ function btnClick() {
 		itemTwo.classList.add('item2-display-none')
 		itemFirst.classList.add('item1-rotate')
 		itemThree.classList.add('item3-rotate')
+        burgerBtn.classList.add('container-btn-border')
 	} else {
 		itemTwo.classList.add('item2-display-none')
 		itemFirst.classList.add('item1-rotate')
 		itemThree.classList.add('item3-rotate')
-		burgerBtn.classList.toggle('container-btn-border')
+		burgerBtn.classList.add('container-btn-border')
 	}
 }
 
