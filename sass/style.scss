@@ -46,16 +46,14 @@ body {
 		}
 
 		.burger-button {
-			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			margin-right: 20px;
 			min-width: 45px;
 			min-height: 45px;
 			text-decoration: none;
 			cursor: pointer;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			border: none;
 
 			.container-btn {
 				position: absolute;
@@ -68,7 +66,6 @@ body {
 					height: 3px;
 					background-color: $black-text;
 					border-radius: 2px;
-
 				}
 
 				.item2 {
@@ -80,23 +77,33 @@ body {
 				}
 
 				.item2-display-none {
-					display: none;
+					@include anim-btn2;
 				}
 
 				.item1-rotate {
-					transform: rotate(45deg);
-					transform-origin: -5% 220%;
+					@include anim-btn1;
 				}
 
 				.item3-rotate {
-					transform: rotate(-45deg);
-					transform-origin: -2% -110%;
+					@include anim-btn3;
+				}
+
+				.item2-display-none-rev {
+					@include anim-btn2-rev;
+				}
+
+				.item1-rotate-rev {
+					@include anim-btn1-rev;
+				}
+
+				.item3-rotate-rev {
+					@include anim-btn3-rev;
 				}
 			}
 		}
 
 		.container-btn-border {
-			border: 3px solid $black-text;
+			border: 2px solid $black-text;
 			border-radius: 5px;
 		}
 	}

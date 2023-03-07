@@ -10,3 +10,83 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+
+//buregr icon - animations:
+
+@mixin anim-btn2 {
+	animation: animation-btn2 .4s ease-in forwards ;
+}
+@keyframes animation-btn2 {
+	from {
+		width: 25px;
+	}
+	to {
+		width: 0px;
+	}
+}
+
+@mixin anim-btn1 {
+	animation: animation-btn1 .4s ease-in forwards ;
+}
+@keyframes animation-btn1 {
+	from {
+		
+	}
+	to {
+		transform: rotate(45deg);
+		transform-origin: -5% 220%;
+	}
+}
+
+@mixin anim-btn3 {
+	animation: animation-btn3 .4s ease-in forwards ;
+}
+@keyframes animation-btn3 {
+	from {
+		
+	}
+	to {
+		transform: rotate(-45deg);
+		transform-origin: -2% -110%;
+	}
+}
+
+//buregr icon - animations - rev:
+
+@mixin anim-btn2-rev {
+	animation: animation-btn2-rev .4s ease-in forwards ;
+}
+@keyframes animation-btn2-rev {
+	from {
+		width: 0px;
+	}
+	to {
+		width: 25px;
+	}
+}
+
+@mixin anim-btn1-rev {
+	animation: animation-btn1-rev .4s ease-in forwards ;
+}
+@keyframes animation-btn1-rev {
+	from {
+		transform: rotate(45deg);
+		transform-origin: -5% 220%;
+	}
+	to {
+
+	}
+}
+
+@mixin anim-btn3-rev {
+	animation: animation-btn3-rev .4s ease-in forwards ;
+}
+@keyframes animation-btn3-rev {
+	from {
+		transform: rotate(-45deg);
+		transform-origin: -2% -110%;
+	}
+	to {
+
+	}
+}

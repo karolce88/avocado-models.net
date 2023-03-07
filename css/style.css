@@ -25,6 +25,46 @@
   transform: translate(-50%, -50%);
 }
 
+@keyframes animation-btn2 {
+  from {
+    width: 25px;
+  }
+  to {
+    width: 0px;
+  }
+}
+@keyframes animation-btn1 {
+  to {
+    transform: rotate(45deg);
+    transform-origin: -5% 220%;
+  }
+}
+@keyframes animation-btn3 {
+  to {
+    transform: rotate(-45deg);
+    transform-origin: -2% -110%;
+  }
+}
+@keyframes animation-btn2-rev {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 25px;
+  }
+}
+@keyframes animation-btn1-rev {
+  from {
+    transform: rotate(45deg);
+    transform-origin: -5% 220%;
+  }
+}
+@keyframes animation-btn3-rev {
+  from {
+    transform: rotate(-45deg);
+    transform-origin: -2% -110%;
+  }
+}
 *,
 ::after,
 ::before {
@@ -66,16 +106,14 @@ body {
   padding: 5px 20px;
 }
 .nav .wrapper .burger-button {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-right: 20px;
   min-width: 45px;
   min-height: 45px;
   text-decoration: none;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
 }
 .nav .wrapper .burger-button .container-btn {
   position: absolute;
@@ -96,18 +134,25 @@ body {
   top: 22px;
 }
 .nav .wrapper .burger-button .container-btn .item2-display-none {
-  display: none;
+  animation: animation-btn2 0.4s ease-in forwards;
 }
 .nav .wrapper .burger-button .container-btn .item1-rotate {
-  transform: rotate(45deg);
-  transform-origin: -5% 220%;
+  animation: animation-btn1 0.4s ease-in forwards;
 }
 .nav .wrapper .burger-button .container-btn .item3-rotate {
-  transform: rotate(-45deg);
-  transform-origin: -2% -110%;
+  animation: animation-btn3 0.4s ease-in forwards;
+}
+.nav .wrapper .burger-button .container-btn .item2-display-none-rev {
+  animation: animation-btn2-rev 0.4s ease-in forwards;
+}
+.nav .wrapper .burger-button .container-btn .item1-rotate-rev {
+  animation: animation-btn1-rev 0.4s ease-in forwards;
+}
+.nav .wrapper .burger-button .container-btn .item3-rotate-rev {
+  animation: animation-btn3-rev 0.4s ease-in forwards;
 }
 .nav .wrapper .container-btn-border {
-  border: 3px solid #585658;
+  border: 2px solid #585658;
   border-radius: 5px;
 }
 
