@@ -76,7 +76,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.nav .wrapper .burger-button button:focus {
+.nav .wrapper .burger-button .burger-button:focus {
   outline: none;
   color: white;
 }
