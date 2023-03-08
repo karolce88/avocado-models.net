@@ -7,6 +7,9 @@ const mobileNavText = document.querySelector('.mobile-nav-items')
 const mobileNavHeight = document.querySelector('.mobile-nav')
 const clickToHideMenu = document.querySelectorAll('.text-menu-anim')
 const nav = document.querySelector('.mobile-nav')
+const logo = document.querySelector('.logo')
+
+
 function btnClick() {
 	// hide menu and removes button animations
 	clickToHideMenu.forEach(item => {
@@ -62,5 +65,12 @@ function btnClick() {
 		mobileNavText.classList.add('aanimation')
 	}
 }
+function logoClick (){
+			nav.classList.remove('mobile-nav-show')
+			itemTwo.classList.remove('item2-display-none')
+			itemFirst.classList.remove('item1-rotate')
+			itemThree.classList.remove('item3-rotate')
+			burgerBtn.classList.remove('container-btn-border')
+}
 burgerBtn.addEventListener('click', btnClick)
-burgerBtn.addEventListener('click', handleNavItemsAnimation)
+logo.addEventListener('click', logoClick)

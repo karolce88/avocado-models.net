@@ -41,6 +41,7 @@ body {
 		.logo {
 			width: 180px;
 			height: 45px;
+			cursor: pointer;
 
 			&__logo-item {
 				width: 180px;
@@ -273,17 +274,31 @@ body {
 	}
 }
 
-.offer {
-	height: 800px;
-	
+main {
+	.offer {
+		height: 800px;
+		background-color: #cb1010;
+	}
 
+	.gallery {
+		height: 800px;
+		background-color: #906161;
+	}
 
+	.casting {
+		height: 800px;
+		background-color: #2b2727;
+	}
 
-
-	
+	.contact {
+		height: 800px;
+		background-color: #837575;
+	}
 }
 
-/// MEDIA
+//////////////////
+////// MEDIA//////
+//////////////////
 
 @media (min-width: 576px) {
 }
