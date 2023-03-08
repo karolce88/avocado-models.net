@@ -277,22 +277,40 @@ body {
 main {
 	.offer {
 		height: 800px;
-		background-color: #cb1010;
+
+		.container {
+			@include h1-style;
+		}
 	}
 
 	.gallery {
+		position: relative;
 		height: 800px;
-		background-color: #906161;
+		background-color: #e6dddd;
+
+		.container {
+			@include h1-style;
+		}
 	}
 
 	.casting {
+		position: relative;
 		height: 800px;
-		background-color: #2b2727;
+		background-color: #e6dddd;
+
+		.container {
+			@include h1-style;
+		}
 	}
 
 	.contact {
+		position: relative;
 		height: 800px;
-		background-color: #837575;
+		background-color: #e6dddd;;
+
+		.container {
+			@include h1-style;
+		}
 	}
 }
 

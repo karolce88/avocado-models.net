@@ -330,8 +330,47 @@ body {
   transform: skew(-55deg);
 }
 
-.offer {
+main .offer {
   height: 800px;
+}
+main .offer .container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .gallery {
+  position: relative;
+  height: 800px;
+  background-color: #e6dddd;
+}
+main .gallery .container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .casting {
+  position: relative;
+  height: 800px;
+  background-color: #e6dddd;
+}
+main .casting .container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .contact {
+  position: relative;
+  height: 800px;
+  background-color: #e6dddd;
+}
+main .contact .container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 768px) {

@@ -147,3 +147,12 @@
 	right: -60px;
     transform: skew(-55deg);
 }
+
+//h1:
+
+@mixin h1-style {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
