@@ -1,3 +1,5 @@
+@use './colors' as *;
+
 .wrapper {
 	margin: 0 auto;
 	width: 100%;
@@ -130,4 +132,18 @@
 	to {
 		right: 0%;
 	}
+}
+
+// graphical animation for transitions between sections
+
+@mixin section-bottom {
+	position: absolute;
+	width: 42vw;
+	height: 10%;
+	background-color: $light-white;
+	bottom: -1px;
+	right: 0px;
+	z-index: 1;
+	right: -60px;
+    transform: skew(-55deg);
 }

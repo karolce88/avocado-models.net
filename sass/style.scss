@@ -10,6 +10,10 @@
 	padding: 0;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
@@ -115,7 +119,7 @@ body {
 	.mobile-nav {
 		position: relative;
 		width: 100%;
-		height: 100vh;
+		height: 0vh;
 		overflow: hidden;
 
 		.mobile-nav-container {
@@ -144,19 +148,24 @@ body {
 					font-size: 24px;
 					letter-spacing: 2px;
 					text-transform: uppercase;
-					
+
 					.text-menu-anim {
 						color: $black-text;
 						text-decoration: none;
+						padding: 10px;
+						margin: 10px;
+						cursor: pointer;
 					}
 
+					.cta-color {
+						color: $CTA;
+					}
 				}
-
 			}
 
-			.git  {
+			.aanimation {
 				@include mobile-menu-text;
-			}	
+			}
 		}
 
 		.mobile-nav-container-show {
@@ -167,9 +176,15 @@ body {
 			@include mobile-menu-anim-rev;
 		}
 	}
+
+	.mobile-nav-show {
+		height: 100vh;
+	}
 }
 
 .header {
+	overflow: hidden;
+	
 	.head-box {
 		position: relative;
 		background-image: url('../img/hero-img-small.jpg');
@@ -251,12 +266,16 @@ body {
 				left: -84px;
 			}
 		}
+
+		.section-anim-bottom {
+			@include section-bottom;
+		}
 	}
 }
 
 .main {
-	height: 500px;
-	background-color: #dc1515;
+	height: 800px;
+	
 }
 
 /// MEDIA
