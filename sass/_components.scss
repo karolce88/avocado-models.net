@@ -148,6 +148,18 @@
     transform: skew(-55deg);
 }
 
+@mixin section-top {
+	position: absolute;
+	width: 42vw;
+	height: 10%;
+	background-color: $light-white;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+	left: -60px;
+    transform: skew(-55deg);
+}
+
 // main sections:
 
 //h1:
