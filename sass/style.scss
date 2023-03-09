@@ -239,7 +239,6 @@ body {
 				text-transform: uppercase;
 				letter-spacing: 1px;
 				overflow: hidden;
-				// z-index: 0;
 			}
 
 			.btn-cta::after,
@@ -275,6 +274,8 @@ body {
 }
 
 main {
+	overflow: hidden;
+
 	.offer-section {
 		.offer {
 			height: 800px;
@@ -294,13 +295,12 @@ main {
 		background-size: cover;
 		background-position: center;
 		background-attachment: fixed;
-		
+
 		.gallery {
 			position: relative;
 			z-index: 1;
-			
-			.container {
 
+			.container {
 				h1 {
 					@include h1-style;
 					color: $pure-white;
@@ -308,7 +308,6 @@ main {
 
 				p {
 					color: $pure-white;
-
 				}
 			}
 		}
@@ -332,10 +331,8 @@ main {
 	}
 
 	.casting-section {
-		
 		.casting {
 			height: 800px;
-			background-color: #c69090;
 
 			.container {
 				h1 {
@@ -346,17 +343,54 @@ main {
 	}
 
 	.contact-section {
+		position: relative;
+		background-image: url('../img/contact.jpg');
+		height: 800px;
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+
 		.contact {
+			position: relative;
 			height: 800px;
-			background-color: #e6dddd;
+			z-index: 1;
 
 			.container {
 				h1 {
 					@include h1-style;
+					color: $pure-white;
+				}
+
+				p {
+					color: $pure-white;
 				}
 			}
 		}
+
+		.section-anim-bottom {
+			@include section-bottom;
+			background-color: grey;
+		}
+
+		.section-anim-top {
+			@include section-top;
+		}
 	}
+
+	.contact-section::after {
+		content: '';
+		position: absolute;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+		z-index: 0;
+	}
+}
+
+footer {
+	height: 200px;
+	background-color: grey;
 }
 
 //////////////////

@@ -334,6 +334,9 @@ body {
   transform: skew(-55deg);
 }
 
+main {
+  overflow: hidden;
+}
 main .offer-section .offer {
   height: 800px;
 }
@@ -384,13 +387,12 @@ main .gallery-section .section-anim-bottom {
 }
 main .gallery-section .section-anim-top {
   position: absolute;
-  width: 42vw;
-  height: 10%;
+  width: 40vw;
+  height: 8%;
   background-color: #eee;
   top: 0px;
-  left: 0px;
   z-index: 1;
-  left: -60px;
+  left: -250px;
   transform: skew(-55deg);
 }
 main .gallery-section::after {
@@ -403,7 +405,6 @@ main .gallery-section::after {
 }
 main .casting-section .casting {
   height: 800px;
-  background-color: #c69090;
 }
 main .casting-section .casting .container h1 {
   position: relative;
@@ -414,9 +415,18 @@ main .casting-section .casting .container h1 {
   text-transform: uppercase;
   color: #585658;
 }
-main .contact-section .contact {
+main .contact-section {
+  position: relative;
+  background-image: url("../img/contact.jpg");
   height: 800px;
-  background-color: #e6dddd;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+main .contact-section .contact {
+  position: relative;
+  height: 800px;
+  z-index: 1;
 }
 main .contact-section .contact .container h1 {
   position: relative;
@@ -426,6 +436,46 @@ main .contact-section .contact .container h1 {
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #585658;
+  color: #fff;
+}
+main .contact-section .contact .container p {
+  color: #fff;
+}
+main .contact-section .section-anim-bottom {
+  position: absolute;
+  width: 42vw;
+  height: 10%;
+  background-color: #eee;
+  bottom: -1px;
+  right: 0px;
+  z-index: 1;
+  right: -60px;
+  transform: skew(-55deg);
+  background-color: grey;
+}
+main .contact-section .section-anim-top {
+  position: absolute;
+  width: 40vw;
+  height: 8%;
+  background-color: #eee;
+  top: 0px;
+  z-index: 1;
+  left: -250px;
+  transform: skew(-55deg);
+}
+main .contact-section::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+footer {
+  height: 200px;
+  background-color: grey;
 }
 
 @media (min-width: 768px) {
