@@ -275,41 +275,75 @@ body {
 }
 
 main {
-	.offer {
-		height: 800px;
+	.offer-section {
+		.offer {
+			height: 800px;
 
-		.container {
-			@include h1-style;
+			.container {
+				h1 {
+					@include h1-style;
+				}
+			}
 		}
 	}
 
-	.gallery {
+	.gallery-section {
 		position: relative;
-		height: 800px;
-		background-color: #e6dddd;
+		background-image: url(../img/gallery/girl-g5058c7761_1920.jpg);
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
 
-		.container {
-			@include h1-style;
+		
+		.galerry-shadow {
+			position: absolute;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			background-color: rgb(190, 18, 18);
+
+		}
+		
+		.gallery {
+			height: 800px;
+			
+			.container {
+				h1 {
+					@include h1-style;
+					color: $pure-white;
+				}
+
+				p {
+					color: $pure-white;
+				}
+			}
 		}
 	}
 
-	.casting {
-		position: relative;
-		height: 800px;
-		background-color: #e6dddd;
+	.casting-section {
+		
+		.casting {
+			height: 800px;
+			background-color: #c69090;
 
-		.container {
-			@include h1-style;
+			.container {
+				h1 {
+					@include h1-style;
+				}
+			}
 		}
 	}
 
-	.contact {
-		position: relative;
-		height: 800px;
-		background-color: #e6dddd;;
+	.contact-section {
+		.contact {
+			height: 800px;
+			background-color: #e6dddd;
 
-		.container {
-			@include h1-style;
+			.container {
+				h1 {
+					@include h1-style;
+				}
+			}
 		}
 	}
 }
@@ -386,7 +420,7 @@ main {
 
 					.btn1::before {
 						background-color: $CTA;
-						height: 3px;
+						height: 2px;
 					}
 
 					.btn1:hover a {

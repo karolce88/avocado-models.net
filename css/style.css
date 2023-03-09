@@ -15,7 +15,7 @@
 .wrapper {
   margin: 0 auto;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1290px;
 }
 
 .center {
@@ -89,6 +89,11 @@
     right: 0%;
   }
 }
+p {
+  padding: 40px;
+  color: #585658;
+}
+
 *,
 ::after,
 ::before {
@@ -330,47 +335,73 @@ body {
   transform: skew(-55deg);
 }
 
-main .offer {
+main .offer-section .offer {
   height: 800px;
 }
-main .offer .container {
+main .offer-section .offer .container h1 {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding: 80px 0 50px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #585658;
 }
-main .gallery {
+main .gallery-section {
   position: relative;
+  background-image: url(../img/gallery/girl-g5058c7761_1920.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+main .gallery-section .galerry-shadow {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(190, 18, 18);
+}
+main .gallery-section .gallery {
+  height: 800px;
+}
+main .gallery-section .gallery .container h1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 80px 0 50px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #585658;
+  color: #fff;
+}
+main .gallery-section .gallery .container p {
+  color: #fff;
+}
+main .casting-section .casting {
+  height: 800px;
+  background-color: #c69090;
+}
+main .casting-section .casting .container h1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 80px 0 50px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #585658;
+}
+main .contact-section .contact {
   height: 800px;
   background-color: #e6dddd;
 }
-main .gallery .container {
+main .contact-section .contact .container h1 {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-main .casting {
-  position: relative;
-  height: 800px;
-  background-color: #e6dddd;
-}
-main .casting .container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-main .contact {
-  position: relative;
-  height: 800px;
-  background-color: #e6dddd;
-}
-main .contact .container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 80px 0 50px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #585658;
 }
 
 @media (min-width: 768px) {
@@ -427,7 +458,7 @@ main .contact .container {
   }
   .nav .wrapper .nav__items .btn1::before {
     background-color: #9A00F0;
-    height: 3px;
+    height: 2px;
   }
   .nav .wrapper .nav__items .btn1:hover a {
     color: #fff;

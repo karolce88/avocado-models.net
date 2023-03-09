@@ -3,7 +3,7 @@
 .wrapper {
 	margin: 0 auto;
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1290px;
 }
 
 .center {
@@ -148,11 +148,21 @@
     transform: skew(-55deg);
 }
 
+// main sections:
+
 //h1:
 
 @mixin h1-style {
 	position: relative;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	padding: 80px 0 50px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: $black-text;
+}
+
+p {
+	padding: 40px;
+	color: $black-text;
 }
