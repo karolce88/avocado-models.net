@@ -369,7 +369,7 @@ main {
 
 		.section-anim-bottom {
 			@include section-bottom;
-			background-color: grey;
+			background-color: rgb(73, 72, 72);
 		}
 
 		.section-anim-top {
@@ -390,7 +390,7 @@ main {
 
 footer {
 	height: 200px;
-	background-color: grey;
+	background-color: rgb(73, 72, 72);
 }
 
 //////////////////

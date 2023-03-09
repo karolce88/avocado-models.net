@@ -150,12 +150,12 @@
 
 @mixin section-top {
 	position: absolute;
-	width: 40vw;
-	height: 8%;
+	width: 42vw;
+	height: 10%;
 	background-color: $light-white;
 	top: 0px;
 	z-index: 1;
-	left: -250px;
+	left: -150px;
     transform: skew(-55deg);
 }
 

@@ -387,12 +387,12 @@ main .gallery-section .section-anim-bottom {
 }
 main .gallery-section .section-anim-top {
   position: absolute;
-  width: 40vw;
-  height: 8%;
+  width: 42vw;
+  height: 10%;
   background-color: #eee;
   top: 0px;
   z-index: 1;
-  left: -250px;
+  left: -150px;
   transform: skew(-55deg);
 }
 main .gallery-section::after {
@@ -451,16 +451,16 @@ main .contact-section .section-anim-bottom {
   z-index: 1;
   right: -60px;
   transform: skew(-55deg);
-  background-color: grey;
+  background-color: rgb(73, 72, 72);
 }
 main .contact-section .section-anim-top {
   position: absolute;
-  width: 40vw;
-  height: 8%;
+  width: 42vw;
+  height: 10%;
   background-color: #eee;
   top: 0px;
   z-index: 1;
-  left: -250px;
+  left: -150px;
   transform: skew(-55deg);
 }
 main .contact-section::after {
@@ -475,7 +475,7 @@ main .contact-section::after {
 
 footer {
   height: 200px;
-  background-color: grey;
+  background-color: rgb(73, 72, 72);
 }
 
 @media (min-width: 768px) {
