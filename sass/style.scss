@@ -292,8 +292,8 @@ main {
 		position: relative;
 		background-image: url('../img/gallery/pexels-nikolai-ulltang-285284\ \(1\).jpg');
 		height: 800px;
-		// background-size: cover;
 		background-position: center;
+		background-size: contain;
 		background-attachment: fixed;
 
 		.gallery {
@@ -346,9 +346,8 @@ main {
 		position: relative;
 		background-image: url('../img/contact.jpg');
 		height: 800px;
-		// background-size: cover;
 		background-position: center;
-		background-attachment: fixed;
+		background-size: contain;
 
 		.contact {
 			position: relative;
