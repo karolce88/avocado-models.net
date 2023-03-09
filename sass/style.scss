@@ -190,7 +190,7 @@ body {
 		position: relative;
 		background-image: url('../img/hero-img-small.jpg');
 		height: 75vh;
-		// background-size: cover;
+		background-size: cover;
 		background-position: center;
 
 		&::after {
@@ -293,8 +293,8 @@ main {
 		background-image: url('../img/gallery/pexels-nikolai-ulltang-285284\ \(1\).jpg');
 		height: 800px;
 		background-position: center;
-		background-size: contain;
 		background-attachment: fixed;
+		background-size: cover;  
 
 		.gallery {
 			position: relative;
@@ -346,8 +346,9 @@ main {
 		position: relative;
 		background-image: url('../img/contact.jpg');
 		height: 800px;
-		background-position: center;
-		background-size: contain;
+		background-attachment: fixed;
+		background-size: cover;
+		background-position: 5% -10%;
 
 		.contact {
 			position: relative;

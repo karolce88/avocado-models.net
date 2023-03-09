@@ -255,6 +255,7 @@ body {
   position: relative;
   background-image: url("../img/hero-img-small.jpg");
   height: 75vh;
+  background-size: cover;
   background-position: center;
 }
 .header .head-box::after {
@@ -353,8 +354,8 @@ main .gallery-section {
   background-image: url("../img/gallery/pexels-nikolai-ulltang-285284 (1).jpg");
   height: 800px;
   background-position: center;
-  background-size: contain;
   background-attachment: fixed;
+  background-size: cover;
 }
 main .gallery-section .gallery {
   position: relative;
@@ -418,8 +419,9 @@ main .contact-section {
   position: relative;
   background-image: url("../img/contact.jpg");
   height: 800px;
-  background-position: center;
-  background-size: contain;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 5% -10%;
 }
 main .contact-section .contact {
   position: relative;
