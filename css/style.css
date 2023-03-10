@@ -510,8 +510,33 @@ footer .container .company-info h4 span {
 }
 footer .container .company-info p {
   font-size: 12px;
-  padding: 0;
+  padding-bottom: 5px;
   color: #fff;
+}
+footer .container .company-info p .btn {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  padding: 3px;
+  z-index: 1;
+}
+footer .container .company-info p .btn::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0px;
+  background-color: #56f000;
+  transition: all 0.3s;
+  border-radius: 4px;
+  z-index: -1;
+}
+footer .container .company-info p .btn:hover::after {
+  height: 100%;
+}
+footer .container .company-info p .btn:hover {
+  color: #585658;
 }
 footer .container .menu {
   display: flex;
@@ -519,15 +544,16 @@ footer .container .menu {
   align-items: flex-end;
   flex-wrap: wrap;
   margin-right: 50px;
-  padding: 8px;
+  padding: 8px 0;
   flex-grow: 1;
+  min-width: 280px;
 }
 footer .container .menu .menu-items {
   height: 100%;
 }
 footer .container .menu .menu-items h4 {
   color: #fff;
-  padding-bottom: 18px;
+  padding-bottom: 24px;
   letter-spacing: 1px;
 }
 footer .container .menu .menu-items ul {
@@ -535,7 +561,7 @@ footer .container .menu .menu-items ul {
 }
 footer .container .menu .menu-items ul li {
   font-size: 12px;
-  padding: 10px 0;
+  padding: 8px 0;
   color: #fff;
   text-decoration: none;
   list-style: none;
@@ -560,7 +586,7 @@ footer .container .menu .menu-items ul li .btn-footer::before {
   height: 0px;
   bottom: 0;
   background-color: #56f000;
-  transition: 0.3s;
+  transition: all 0.3s;
   z-index: -1;
   border-radius: 4px;
 }
@@ -576,8 +602,9 @@ footer .container .menu .menu-items ul li .btn-footer-cta:hover {
 }
 footer .container .created-by {
   display: flex;
-  flex-direction: column;
   justify-content: flex-end;
+  align-items: flex-end;
+  padding-top: 35px;
 }
 footer .container .created-by p {
   padding: 8px;
