@@ -456,7 +456,7 @@ footer {
 
 				h4 {
 					color: $pure-white;
-					padding-bottom: 24px;
+					padding-bottom: 18px;
 					letter-spacing: 1px;
 				}
 
@@ -472,14 +472,17 @@ footer {
 
 						.btn-footer {
 							position: relative;
+							display: flex;
+							justify-content: center;
 							text-decoration: none;
 							color: $pure-white;
 							z-index: 1;
+							padding: 3px;
 						}
 
 						.btn-footer:hover {
 							color: $black-text;
-							transition: 0.3s;
+							transition: all 0.3s;
 						}
 
 						.btn-footer::before {
@@ -503,7 +506,6 @@ footer {
 							height: 2px;
 						}
 
-
 						.btn-footer-cta:hover {
 							color: $pure-white;
 						}
@@ -521,6 +523,32 @@ footer {
 				padding: 8px;
 				color: $pure-white;
 				font-size: 12px;
+
+				.btn-footer {
+					position: relative;
+					text-decoration: none;
+					color: $pure-white;
+					margin-left: 10px;
+					padding: 3px;
+					z-index: 1;
+				}
+
+				.btn-footer::after {
+					content: '';
+					position: absolute;
+					width: 100%;
+					height: 2px;
+					background-color: $CTA;
+					bottom: 0px;
+					left: 0px;
+					transition: all .3s;
+					z-index: -1;
+					border-radius: 4px;
+				}
+
+				.btn-footer:hover::after {
+					height: 100%;
+				}
 			}
 		}
 	}

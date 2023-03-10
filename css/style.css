@@ -527,7 +527,7 @@ footer .container .menu .menu-items {
 }
 footer .container .menu .menu-items h4 {
   color: #fff;
-  padding-bottom: 24px;
+  padding-bottom: 18px;
   letter-spacing: 1px;
 }
 footer .container .menu .menu-items ul {
@@ -542,13 +542,16 @@ footer .container .menu .menu-items ul li {
 }
 footer .container .menu .menu-items ul li .btn-footer {
   position: relative;
+  display: flex;
+  justify-content: center;
   text-decoration: none;
   color: #fff;
   z-index: 1;
+  padding: 3px;
 }
 footer .container .menu .menu-items ul li .btn-footer:hover {
   color: #585658;
-  transition: 0.3s;
+  transition: all 0.3s;
 }
 footer .container .menu .menu-items ul li .btn-footer::before {
   content: "";
@@ -580,6 +583,29 @@ footer .container .created-by p {
   padding: 8px;
   color: #fff;
   font-size: 12px;
+}
+footer .container .created-by p .btn-footer {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  margin-left: 10px;
+  padding: 3px;
+  z-index: 1;
+}
+footer .container .created-by p .btn-footer::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #9A00F0;
+  bottom: 0px;
+  left: 0px;
+  transition: all 0.3s;
+  z-index: -1;
+  border-radius: 4px;
+}
+footer .container .created-by p .btn-footer:hover::after {
+  height: 100%;
 }
 
 @media (min-width: 768px) {
