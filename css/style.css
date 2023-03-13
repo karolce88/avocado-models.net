@@ -286,7 +286,7 @@ body {
 }
 .header .head-box__text .btn-cta {
   position: relative;
-  border: 3px solid #9A00F0;
+  border: 3px solid transparent;
   background-color: transparent;
   border-radius: 8px;
   padding: 12px 24px;
@@ -295,6 +295,10 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   overflow: hidden;
+  transition: all 0.2s;
+}
+.header .head-box__text .btn-cta:hover {
+  border: 3px solid #9A00F0;
 }
 .header .head-box__text .btn-cta::after,
 .header .head-box__text .btn-cta::before {
@@ -444,8 +448,17 @@ main .contact-section .contact .container h1 {
   color: #585658;
   color: #fff;
 }
-main .contact-section .contact .container p {
-  color: #fff;
+main .contact-section .contact .container .contact-items {
+  width: 100%;
+  height: 550px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+main .contact-section .contact .container .contact-items .form {
+  width: 80%;
+  height: 300px;
+  background-color: #a6e300;
 }
 main .contact-section .section-anim-bottom {
   position: absolute;
@@ -547,6 +560,7 @@ footer .container .menu {
   padding: 8px 0;
   flex-grow: 1;
   min-width: 280px;
+  display: none;
 }
 footer .container .menu .menu-items {
   height: 100%;
@@ -604,10 +618,10 @@ footer .container .created-by {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  padding-top: 35px;
+  padding-top: 25px;
+  width: 100%;
 }
 footer .container .created-by p {
-  padding: 8px;
   color: #fff;
   font-size: 12px;
 }
@@ -615,16 +629,16 @@ footer .container .created-by p .btn-footer {
   position: relative;
   text-decoration: none;
   color: #fff;
-  margin-left: 10px;
   padding: 3px;
   z-index: 1;
+  margin-left: 5px;
 }
 footer .container .created-by p .btn-footer::after {
   content: "";
   position: absolute;
   width: 100%;
-  height: 2px;
-  background-color: #9A00F0;
+  height: 1px;
+  background-color: #56f000;
   bottom: 0px;
   left: 0px;
   transition: all 0.3s;
@@ -633,6 +647,9 @@ footer .container .created-by p .btn-footer::after {
 }
 footer .container .created-by p .btn-footer:hover::after {
   height: 100%;
+}
+footer .container .created-by p .btn-footer:hover {
+  color: #585658;
 }
 
 @media (min-width: 768px) {
@@ -644,6 +661,12 @@ footer .container .created-by p .btn-footer:hover::after {
   }
   .header .head-box__text h1 {
     font-size: 36px;
+  }
+  footer .container .menu {
+    display: flex;
+  }
+  footer .container .created-by {
+    padding-top: 0px;
   }
 }
 @media (min-width: 992px) {
