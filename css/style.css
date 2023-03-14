@@ -270,7 +270,7 @@ body {
 .header .head-box__text h1 {
   font-size: 28px;
   padding-bottom: 10px;
-  color: #fff;
+  color: #ffffff;
   letter-spacing: 5px;
   font-family: "Open Sans-bold";
   font-weight: bold;
@@ -279,7 +279,7 @@ body {
   color: #56f000;
 }
 .header .head-box__text p {
-  color: #fff;
+  color: #ffffff;
   padding-bottom: 45px;
   letter-spacing: 1px;
   font-size: 18px;
@@ -291,7 +291,7 @@ body {
   border-radius: 8px;
   padding: 12px 24px;
   cursor: pointer;
-  color: #fff;
+  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 1px;
   overflow: hidden;
@@ -352,7 +352,7 @@ main .offer-section .offer .container h1 {
   padding: 70px 0 0;
 }
 main .offer-section .offer .container .offer-items p {
-  padding: 40px;
+  padding: 40px 0;
   color: #585658;
 }
 main .gallery-section {
@@ -376,10 +376,10 @@ main .gallery-section .gallery .container h1 {
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #585658;
-  color: #fff;
+  color: #ffffff;
 }
 main .gallery-section .gallery .container p {
-  color: #fff;
+  color: #ffffff;
 }
 main .gallery-section .section-anim-bottom {
   position: absolute;
@@ -446,19 +446,174 @@ main .contact-section .contact .container h1 {
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #585658;
-  color: #fff;
+  color: #ffffff;
 }
 main .contact-section .contact .container .contact-items {
   width: 100%;
   height: 550px;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
-main .contact-section .contact .container .contact-items .form {
+main .contact-section .contact .container .contact-items .contact-data {
   width: 80%;
-  height: 300px;
-  background-color: #a6e300;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+main .contact-section .contact .container .contact-items .contact-data .phone-box {
+  width: 260px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 45px;
+  padding-bottom: 25px;
+}
+main .contact-section .contact .container .contact-items .contact-data .phone-box .center-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .contact-section .contact .container .contact-items .contact-data .phone-box .center-icon .icon {
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+}
+main .contact-section .contact .container .contact-items .contact-data .phone-box .center-icon a {
+  position: relative;
+  text-decoration: none;
+  color: #ffffff;
+}
+main .contact-section .contact .container .contact-items .contact-data .phone-box .center-icon a::after {
+  position: absolute;
+  content: "";
+  bottom: -3px;
+  right: 0%;
+  width: 0%;
+  height: 2px;
+  background-color: #56f000;
+  transition: all 0.3s;
+  z-index: -1;
+  overflow: hidden;
+}
+main .contact-section .contact .container .contact-items .contact-data .phone-box .center-icon a:hover::after {
+  width: 100%;
+}
+main .contact-section .contact .container .contact-items .contact-data .email-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 260px;
+  height: 45px;
+  padding-bottom: 25px;
+}
+main .contact-section .contact .container .contact-items .contact-data .email-box .center-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .contact-section .contact .container .contact-items .contact-data .email-box .center-icon .icon {
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+}
+main .contact-section .contact .container .contact-items .contact-data .email-box .center-icon a {
+  position: relative;
+  text-decoration: none;
+  color: #ffffff;
+}
+main .contact-section .contact .container .contact-items .contact-data .email-box .center-icon a::after {
+  position: absolute;
+  content: "";
+  bottom: -3px;
+  right: 0%;
+  width: 0%;
+  height: 2px;
+  background-color: #56f000;
+  transition: all 0.3s;
+  z-index: -1;
+  overflow: hidden;
+}
+main .contact-section .contact .container .contact-items .contact-data .email-box .center-icon a:hover::after {
+  width: 100%;
+}
+main .contact-section .contact .container .contact-items .form-box {
+  width: 90%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+}
+main .contact-section .contact .container .contact-items .form-box .container-padding {
+  padding: 8px;
+}
+main .contact-section .contact .container .contact-items .form-box .container-padding .h3header {
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  padding-bottom: 20px;
+}
+main .contact-section .contact .container .contact-items .form-box .container-padding .form-items form {
+  display: flex;
+  flex-direction: column;
+}
+main .contact-section .contact .container .contact-items .form-box .container-padding .form-items form label {
+  color: #ffffff;
+  padding: 15px 0px 4px;
+}
+main .contact-section .contact .container .contact-items .form-box .container-padding .form-items form .email {
+  padding: 5px;
+  max-width: 400px;
+}
+main .contact-section .contact .container .contact-items .form-box .container-padding .form-items form .message {
+  padding: 5px;
+  height: 80px;
+  resize: none;
+  margin-bottom: 15px;
+}
+main .contact-section .contact .container .contact-items .form-box .container-padding .form-items form .button-form {
+  position: relative;
+  width: 100px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  border-radius: 8px;
+  padding: 8px 18px;
+  cursor: pointer;
+  color: #585658;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+main .contact-section .contact .container .contact-items .form-box .container-padding .form-items form .button-form:hover {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+main .contact-section .contact .container .contact-items .form-box .container-padding .form-items form .button-form::after,
+main .contact-section .contact .container .contact-items .form-box .container-padding .form-items form .button-form::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  top: -7px;
+  left: -20px;
+  height: 55px;
+  background-color: #ffffff;
+  z-index: -1;
+  transition: all 0.3s;
+}
+main .contact-section .contact .container .contact-items .form-box .container-padding .form-items form .button-form::before {
+  left: 50px;
+}
+main .contact-section .contact .container .contact-items .form-box .container-padding .form-items form .button-form:hover::before {
+  left: 105px;
+}
+main .contact-section .contact .container .contact-items .form-box .container-padding .form-items form .button-form:hover::after {
+  left: -84px;
 }
 main .contact-section .section-anim-bottom {
   position: absolute;
@@ -508,13 +663,14 @@ footer .container .company-info {
   margin-bottom: 25px;
   width: 280px;
 }
-footer .container .company-info img {
+footer .container .company-info .logo {
   width: 150px;
   height: 40px;
   margin-bottom: 8px;
+  border-radius: 5px;
 }
 footer .container .company-info h4 {
-  color: #fff;
+  color: #ffffff;
   margin-bottom: 7px;
   letter-spacing: 1px;
 }
@@ -524,32 +680,38 @@ footer .container .company-info h4 span {
 footer .container .company-info p {
   font-size: 12px;
   padding-bottom: 5px;
-  color: #fff;
+  color: #ffffff;
 }
-footer .container .company-info p .btn {
+footer .container .company-info p .icon {
+  width: 25px;
+  height: 25px;
+}
+footer .container .company-info p .btn-link {
   position: relative;
   text-decoration: none;
-  color: #fff;
-  padding: 3px;
+  color: #ffffff;
+  padding-left: 8px;
   z-index: 1;
 }
-footer .container .company-info p .btn::after {
+footer .container .company-info p .btn-link::after {
   position: absolute;
   content: "";
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0px;
+  bottom: -3px;
+  right: 0%;
+  width: 0%;
+  height: 2px;
   background-color: #56f000;
   transition: all 0.3s;
-  border-radius: 4px;
   z-index: -1;
+  overflow: hidden;
+  bottom: 4px;
 }
-footer .container .company-info p .btn:hover::after {
-  height: 100%;
+footer .container .company-info p .btn-link:hover::after {
+  width: 100%;
+  width: 96%;
 }
-footer .container .company-info p .btn:hover {
-  color: #585658;
+footer .container .company-info .center-icon {
+  display: flex;
 }
 footer .container .menu {
   display: flex;
@@ -566,7 +728,7 @@ footer .container .menu .menu-items {
   height: 100%;
 }
 footer .container .menu .menu-items h4 {
-  color: #fff;
+  color: #ffffff;
   padding-bottom: 24px;
   letter-spacing: 1px;
 }
@@ -576,7 +738,7 @@ footer .container .menu .menu-items ul {
 footer .container .menu .menu-items ul li {
   font-size: 12px;
   padding: 8px 0;
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   list-style: none;
 }
@@ -585,73 +747,103 @@ footer .container .menu .menu-items ul li .btn-footer {
   display: flex;
   justify-content: center;
   text-decoration: none;
-  color: #fff;
+  color: #ffffff;
   z-index: 1;
   padding: 3px;
 }
-footer .container .menu .menu-items ul li .btn-footer:hover {
-  color: #585658;
-  transition: all 0.3s;
-}
+footer .container .menu .menu-items ul li .btn-footer::after,
 footer .container .menu .menu-items ul li .btn-footer::before {
   content: "";
   position: absolute;
-  width: 100%;
-  height: 0px;
-  bottom: 0;
-  background-color: #56f000;
+  width: 0;
+  height: 0;
   transition: all 0.3s;
-  z-index: -1;
-  border-radius: 4px;
+}
+footer .container .menu .menu-items ul li .btn-footer::before {
+  top: -4px;
+  left: -6px;
+  border-top: 0px solid #56f000;
+  border-left: 0px solid #56f000;
+}
+footer .container .menu .menu-items ul li .btn-footer::after {
+  bottom: -4px;
+  right: -6px;
+  border-bottom: 0px solid #56f000;
+  border-right: 0px solid #56f000;
+}
+footer .container .menu .menu-items ul li .btn-footer:hover::after,
+footer .container .menu .menu-items ul li .btn-footer:hover::before {
+  width: 32px;
+  height: 20px;
 }
 footer .container .menu .menu-items ul li .btn-footer:hover::before {
-  height: 100%;
+  border-top: 3px solid #56f000;
+  border-left: 3px solid #56f000;
 }
-footer .container .menu .menu-items ul li .btn-footer-cta::before {
-  background-color: #9A00F0;
-  height: 2px;
+footer .container .menu .menu-items ul li .btn-footer:hover::after {
+  border-bottom: 3px solid #56f000;
+  border-right: 3px solid #56f000;
 }
-footer .container .menu .menu-items ul li .btn-footer-cta:hover {
-  color: #fff;
-}
-footer .container .created-by {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding-top: 25px;
+footer .created-by {
   width: 100%;
+  background-color: rgba(32, 31, 31, 0.7411764706);
 }
-footer .container .created-by p {
-  color: #fff;
+footer .created-by .line {
+  margin: 0 auto;
+  width: 20px;
+  border: 1px solid #777777;
+  border-radius: 4px;
+}
+footer .created-by .copyright-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .created-by .copyright-box p {
+  font-size: 14px;
+  padding: 8px;
+  color: #777777;
+}
+footer .created-by .created-box {
+  display: flex;
+  justify-content: center;
+}
+footer .created-by .created-box p {
+  height: 100%;
+  color: #777777;
   font-size: 12px;
+  padding: 8px;
+  margin-right: 15px;
 }
-footer .container .created-by p .btn-footer {
+footer .created-by .created-box p .btn-footer {
   position: relative;
   text-decoration: none;
-  color: #fff;
+  color: #777777;
   padding: 3px;
   z-index: 1;
   margin-left: 5px;
 }
-footer .container .created-by p .btn-footer::after {
-  content: "";
+footer .created-by .created-box p .btn-footer::after {
   position: absolute;
-  width: 100%;
-  height: 1px;
+  content: "";
+  bottom: -3px;
+  right: 0%;
+  width: 0%;
+  height: 2px;
   background-color: #56f000;
-  bottom: 0px;
-  left: 0px;
   transition: all 0.3s;
   z-index: -1;
-  border-radius: 4px;
+  overflow: hidden;
 }
-footer .container .created-by p .btn-footer:hover::after {
-  height: 100%;
-}
-footer .container .created-by p .btn-footer:hover {
-  color: #585658;
+footer .created-by .created-box p .btn-footer:hover::after {
+  width: 100%;
 }
 
+@media (min-width: 576px) {
+  .contact-section .contact-items .form-box {
+    padding: 10px;
+  }
+}
 @media (min-width: 768px) {
   .header .head-box {
     background-image: url("../img/hero-img-big.jpg");
@@ -699,26 +891,41 @@ footer .container .created-by p .btn-footer:hover {
     border-radius: 7px;
     margin: 0 8px;
   }
+  .nav .wrapper .nav__items .btn::after,
   .nav .wrapper .nav__items .btn::before {
-    position: absolute;
     content: "";
-    background-color: #56f000;
-    width: 100%;
-    bottom: 0px;
+    position: absolute;
+    width: 0px;
     height: 0px;
-    transition: height 0.4s, color 0.1s;
-    z-index: -1;
-    border-radius: 5px;
+    transition: all 0.3s;
   }
-  .nav .wrapper .nav__items .btn1::before {
-    background-color: #9A00F0;
-    height: 2px;
+  .nav .wrapper .nav__items .btn::before {
+    top: -2px;
+    left: 3px;
+    border-top: 0px solid #56f000;
+    border-left: 0px solid #56f000;
   }
-  .nav .wrapper .nav__items .btn1:hover a {
-    color: #fff;
+  .nav .wrapper .nav__items .btn::after {
+    bottom: -2px;
+    right: 3px;
+    border-bottom: 0px solid #56f000;
+    border-right: 0px solid #56f000;
+  }
+  .nav .wrapper .nav__items .btn:hover::after,
+  .nav .wrapper .nav__items .btn:hover::before {
+    width: 40px;
+    height: 25px;
+  }
+  .nav .wrapper .nav__items .btn:hover::after {
+    border-bottom: 3px solid #56f000;
+    border-right: 3px solid #56f000;
   }
   .nav .wrapper .nav__items .btn:hover::before {
-    height: 100%;
+    border-top: 3px solid #56f000;
+    border-left: 3px solid #56f000;
+  }
+  .nav .wrapper .nav__items .btn1 {
+    color: #9A00F0;
   }
   .nav .wrapper .nav__item {
     display: flex;
@@ -732,5 +939,8 @@ footer .container .created-by p .btn-footer:hover {
     text-decoration: none;
     color: #585658;
     font-size: 18px;
+  }
+  .contact-section .contact-items .form-box {
+    padding: 22px;
   }
 }/*# sourceMappingURL=style.css.map */

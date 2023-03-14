@@ -24,7 +24,7 @@
                 <ul class="nav__items">
                     <li class="nav__item btn"><a href="#offer">Oferta</a></li>
                     <li class="nav__item btn"><a href="#gallery">Galeria</a></li>
-                    <li class="nav__item btn btn1"><a href="#casting">Casting</a></li>
+                    <li class="nav__item btn"><a href="#casting" class="btn1">Casting</a></li>
                     <li class="nav__item btn"><a href="#contact">Kontakt</a></li>
                 </ul>
             </div>
@@ -122,8 +122,33 @@
                 <div class="container">
                     <h1>Kontakt</h1>
                     <div class="contact-items">
-                        <div class="form">
-                            
+                        <div class="contact-data">
+                            <div class="phone-box">
+                                <p class="center-icon"><img src="img/icon/phone.svg" class="icon"><a
+                                        href="tel:+48665442265" class="btn">+48 665
+                                        44 22 65</a></p>
+                            </div>
+                            <div class="email-box">
+                                <p class="center-icon"><img src="img/icon/email.svg" class="icon"><a
+                                        href="mailto:biuro@avocadomodels.net" class="btn">biuro@avocadomodels.net</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-box">
+                            <div class="container-padding">
+                                <h3 class="h3header">SZYBKI KONTAKT</h3>
+                                <div class="form-items">
+                                    <form action="https://formsubmit.co/biuro@avocadomodels.net" method="POST">
+                                        <label>e-mail:</label>
+                                        <input class="email" type="email" name="email" required
+                                            placeholder="Wpisz swój adres">
+                                        <label>wiadomość:</label>
+                                        <textarea class="message" id="" rows="10" name="name" required
+                                            class="mail-msg-item" placeholder="Wpisz wiadomość"></textarea>
+                                        <button type="submit" class="button-form">Wyślij</button>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -136,14 +161,19 @@
             <div class="footer wrapper">
                 <div class="container">
                     <div class="company-info">
-                        <a href="#"><img class="logo__logo-item" src="img/logo.png" alt="Logo Avocado Models"></a>
+                        <a href="#"><img class="logo" src="img/logo.png" alt="Logo Avocado Models"></a>
                         <h4>Zmień siebie</h4>
                         <p>Poszukujemy modelek które są zainteresowane zmianą swojego wizerunku. Specjalizujemy się w
                             modnych, krótkich fryzurach. Zmień siebie. Jesteś tego warta!</p>
                         <br>
                         <h4>Kontakt:</h4>
-                        <p><a href="tel:+48665442265" class="btn">+48 665 44 22 65</a></p>
-                        <p><a href="mailto:biuro@avocadomodels.net" class="btn">biuro@avocadomodels.net</a></p>
+                        <div class="contact-items">
+                            <p class="center-icon"><img src="img/icon/phone.svg" class="icon"><a href="tel:+48665442265"
+                                    class="btn-link">+48 665
+                                    44 22 65</a></p>
+                            <p class="center-icon"><img src="img/icon/email.svg" class="icon"><a
+                                    href="mailto:biuro@avocadomodels.net" class="btn-link">biuro@avocadomodels.net</a></p>
+                        </div>
                     </div>
                     <div class="menu">
                         <div class="menu-items">
@@ -152,14 +182,20 @@
                                 <li><a href="#offer" class="btn-footer">Oferta</a></li>
                                 <li><a href="#gallery" class="btn-footer">Galeria</a></li>
                                 <li><a href="#casting" class="btn-footer btn-footer-cta">Casting</a></li>
-                                <li><a href="#contact" class="btn-footer">Kontakt</a></li> 
+                                <li><a href="#contact" class="btn-footer">Kontakt</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="created-by">
-                        <p>projekt i wykonanie: <a href="http://dreampage.pl" target="_blank"
+                </div>
+            </div>
+            <div class="created-by">
+                <div class="copyright-box">
+                    <p>&copy; <span class="footer-year"></span> avocado models</p>
+                </div>
+                <div class="line"></div>
+                <div class="created-box">
+                    <p>projekt i wykonanie: <a href="http://dreampage.pl" target="_blank"
                             class="btn-footer">www.dreampage.pl</a></p>
-                    </div>
                 </div>
             </div>
         </footer>

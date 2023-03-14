@@ -8,6 +8,7 @@ const mobileNavHeight = document.querySelector('.mobile-nav')
 const clickToHideMenu = document.querySelectorAll('.text-menu-anim')
 const nav = document.querySelector('.mobile-nav')
 const logo = document.querySelector('.logo')
+const footerYear = document.querySelector('.footer-year')
 
 
 function btnClick() {
@@ -72,5 +73,13 @@ function logoClick (){
 			itemThree.classList.remove('item3-rotate')
 			burgerBtn.classList.remove('container-btn-border')
 }
+
+
+const handleCurrentYear = () => {
+    const year = (new Date).getFullYear();
+    footerYear.innerText = year;
+}
+
+handleCurrentYear();
 burgerBtn.addEventListener('click', btnClick)
 logo.addEventListener('click', logoClick)
