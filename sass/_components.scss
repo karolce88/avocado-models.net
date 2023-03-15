@@ -177,7 +177,7 @@
 @mixin link-anim-after {
 	position: absolute;
 	content: '';
-	bottom: -3px;
+	bottom: -1px;
 	right: 0%;
 	width: 0%;
 	height: 2px;
@@ -189,4 +189,15 @@
 
 @mixin link-anim-hover-after {
 	width: 100%;
+}
+
+// animation for button in casting section:
+
+@keyframes anim-button-casting {
+	from{
+		left: -400px;
+	}
+	to {
+		left: 500px;
+	}
 }

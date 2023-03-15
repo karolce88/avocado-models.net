@@ -24,7 +24,7 @@
                 <ul class="nav__items">
                     <li class="nav__item btn"><a href="#offer">Oferta</a></li>
                     <li class="nav__item btn"><a href="#gallery">Galeria</a></li>
-                    <li class="nav__item btn"><a href="#casting" class="btn1">Casting</a></li>
+                    <li class="nav__item btn btn1"><a href="#casting" class="btn1">Casting</a></li>
                     <li class="nav__item btn"><a href="#contact">Kontakt</a></li>
                 </ul>
             </div>
@@ -103,15 +103,49 @@
             <div class="casting wrapper">
                 <div class="container">
                     <h1>Casting</h1>
-                    <div class="casting-items">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta inventore
-                            libero
-                            optio numquam ducimus dolorum repudiandae totam accusantium iusto et, voluptates eveniet
-                            quibusdam
-                            magni. Ex fugiat nobis dignissimos. Vel sit nihil ipsum dolores ullam accusantium iure
-                            quibusdam,
-                            similique adipisci quae.</p>
+                    <div class="casting-offer">
+
+                        <div class="offer-text">
+                            <h3>Poszukujemy modelek chętnych do zmiany fryzury</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis accusantium quod
+                                voluptates aspernatur, quas ipsum incidunt, rem aut eius delectus impedit natus facilis
+                                quidem amet voluptatem esse nesciunt dignissimos consequuntur similique deserunt ipsa
+                                voluptatum laboriosam. Sit, pariatur id culpa consequatur qui, accusamus vero facilis
+                                aspernatur reprehenderit dolor natus sunt cumque obcaecati fugiat non. Molestias
+                                commodi, cupiditate harum pariatur expedita atque ratione quo ab saepe ex dolore omnis
+                                sunt recusandae, beatae quidem nam minus obcaecati officia id labore veniam fugit at
+                                magni dolorum? Officiis obcaecati perspiciatis temporibus sequi aliquam. Reprehenderit
+                                ut, aliquid ratione consequuntur.</p>
+                        </div>
+                        <div class="offer-img"><img class="offer-picture" src="img/offer/haircut-offer.jpg"></div>
                     </div>
+
+                    <hr>
+
+                    <div class="offer-explain">
+                        <div class="h3-anim">
+                            <h3>Jak wysłać zgłoszenie?</h3>
+                        </div>
+                        <p class="text bold">Krok 1</p>
+                        <p class="text">Wykonaj 3 zdjęcia na gładkim tle, np. ścianie:</p>
+
+                        <div class="pictures-container">
+
+                            <div class="img1"></div>
+                            <div class="img2"></div>
+                            <div class="img3"></div>
+
+                        </div>
+
+                        <div class="send-offer">
+                            <p class="text bold">Krok 2</p>
+                            <p class="text">Wyslij zdjęcia na adres:</p>
+                            <p class="btn"><a href="email:biuro@avocadomodels.net">biuro@avocadomodels.net</a></p>
+                        </div>
+
+                    </div>
+
+
                 </div>
             </div>
         </section>
@@ -137,25 +171,20 @@
                         <div class="form-box">
                             <div class="container-padding">
                                 <h3 class="h3header">SZYBKI KONTAKT</h3>
-
                                 <div class="form-items">
-                                    
-                                    <form id="contactform" action="https://formsubmit.io/send/biuro@avocadomodels.net" method="POST">
+                                    <form id="contactform" action="https://formsubmit.io/send/biuro@avocadomodels.net"
+                                        method="POST">
                                         <label>e-mail:</label>
-
                                         <input id="mail" class="mail" type="mail" name="mail" required
                                             placeholder="Wpisz swój adres e-mail">
-
                                         <label>wiadomość:</label>
-
-                                        <textarea class="message" id="msg" rows="5" name="msg" required placeholder="Wpisz wiadomość"></textarea>
-
+                                        <textarea class="message" id="msg" rows="5" name="msg" required
+                                            placeholder="Wpisz wiadomość"></textarea>
                                         <button type="submit" class="button-form">Wyślij</button>
-
+                                        <input name="_redirect" type="hidden" id="name"
+                                            value="https://avocadomodels.net/dziekujemy/">
                                     </form>
-
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -180,7 +209,8 @@
                                     class="btn-link">+48 665
                                     44 22 65</a></p>
                             <p class="center-icon"><img src="img/icon/email.svg" class="icon"><a
-                                    href="mailto:biuro@avocadomodels.net" class="btn-link">biuro@avocadomodels.net</a></p>
+                                    href="mailto:biuro@avocadomodels.net" class="btn-link">biuro@avocadomodels.net</a>
+                            </p>
                         </div>
                     </div>
                     <div class="menu">
