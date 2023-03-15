@@ -352,9 +352,14 @@ main {
 
 	.casting-section {
 		scroll-margin-top: 49px;
+		height: 3000px;
 
 		.casting {
 			.container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				align-content: space-evenly;  
 				padding: 15px;
 
 				h1 {
@@ -411,17 +416,18 @@ main {
 						position: relative;
 						padding: 35px;
 						border-radius: 60px;
-						width: 440px;
-						height: 160px;
+						width: 280px;
+						height: 110px;
 						overflow: hidden;
 						display: flex;
 						justify-items: center;
 						z-index: 1;
 
 						h3 {
-							font-size: 35px;
+							font-size: 20px;
 							display: flex;
 							justify-content: center;
+							align-items: center;
 							color: $black-text;
 							z-index: 5;
 						}
@@ -481,9 +487,29 @@ main {
 					}
 
 					.pictures-container {
+						display: flex;
+						justify-content: space-around;
+						flex-wrap: wrap;
+						align-content: space-around;
 						width: 100%;
-						height: 500px;
+						height: auto;
 						background-color: #bfbfbf;
+
+						.img1 {
+							width: 280px;
+							height: 300px;
+							background-color: #e78f8f;
+						}
+						.img2 {
+							width: 280px;
+							height: 300px;
+							background-color: #98e78f;
+						}
+						.img3 {
+							width: 280px;
+							height: 300px;
+							background-color: #8fcbe7;
+						}
 					}
 				}
 			}
@@ -920,10 +946,66 @@ footer {
 //////////////////
 
 @media (min-width: 576px) {
-	.contact-section {
-		.contact-items {
-			.form-box {
-				padding: 10px;
+	main {
+		.casting-section {
+			.casting {
+				.container {
+					.offer-explain {
+						.h3-anim {
+							padding: 35px;
+							border-radius: 60px;
+							width: 280px;
+							height: 110px;
+	
+							h3 {
+								font-size: 20px;
+							}
+						}
+	
+						.h3-anim::after {
+							content: '';
+							position: absolute;
+							top: -120px;
+							left: -400px;
+							width: 250px;
+							height: 350px;
+						}
+	
+						.pictures-container {
+							display: flex;
+							justify-content: space-around;
+							flex-wrap: wrap;
+							align-content: space-around;
+							width: 100%;
+							background-color: #bfbfbf;
+	
+							.img1 {
+								width: 280px;
+								height: 300px;
+								background-color: #e78f8f;
+							}
+							.img2 {
+								width: 280px;
+								height: 300px;
+								background-color: #98e78f;
+							}
+							.img3 {
+								width: 280px;
+								height: 300px;
+								background-color: #8fcbe7;
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		
+		.contact-section {
+			.contact-items {
+				.form-box {
+					padding: 10px;
+				}
 			}
 		}
 	}
@@ -1004,6 +1086,30 @@ footer {
 						.offer-picture:hover {
 							width: 350px;
 							height: 440px;
+						}
+					}
+
+					.offer-explain {
+						.h3-anim {
+							width: 440px;
+							height: 160px;
+
+							h3 {
+								font-size: 35px;
+							}
+						}
+
+						.h3-anim::after {
+							content: '';
+							position: absolute;
+							top: -120px;
+							left: -400px;
+							width: 250px;
+							height: 350px;
+							background-image: linear-gradient(to top, #3b42c596 0%, #a981bb72 49%, #ffc9a995 100%);
+							transform: rotate(30deg);
+							animation: anim-button-casting 2s ease infinite;
+							z-index: -5;
 						}
 					}
 				}

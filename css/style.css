@@ -425,8 +425,13 @@ main .gallery-section::after {
 }
 main .casting-section {
   scroll-margin-top: 49px;
+  height: 3000px;
 }
 main .casting-section .casting .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-evenly;
   padding: 15px;
 }
 main .casting-section .casting .container h1 {
@@ -482,17 +487,18 @@ main .casting-section .casting .container .offer-explain .h3-anim {
   position: relative;
   padding: 35px;
   border-radius: 60px;
-  width: 440px;
-  height: 160px;
+  width: 280px;
+  height: 110px;
   overflow: hidden;
   display: flex;
   justify-items: center;
   z-index: 1;
 }
 main .casting-section .casting .container .offer-explain .h3-anim h3 {
-  font-size: 35px;
+  font-size: 20px;
   display: flex;
   justify-content: center;
+  align-items: center;
   color: #585658;
   z-index: 5;
 }
@@ -550,9 +556,28 @@ main .casting-section .casting .container .offer-explain .send-offer .text {
   color: #585658;
 }
 main .casting-section .casting .container .offer-explain .pictures-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: space-around;
   width: 100%;
-  height: 500px;
+  height: auto;
   background-color: #bfbfbf;
+}
+main .casting-section .casting .container .offer-explain .pictures-container .img1 {
+  width: 280px;
+  height: 300px;
+  background-color: #e78f8f;
+}
+main .casting-section .casting .container .offer-explain .pictures-container .img2 {
+  width: 280px;
+  height: 300px;
+  background-color: #98e78f;
+}
+main .casting-section .casting .container .offer-explain .pictures-container .img3 {
+  width: 280px;
+  height: 300px;
+  background-color: #8fcbe7;
 }
 main .contact-section {
   position: relative;
@@ -970,7 +995,47 @@ footer .created-by .created-box p .btn-footer:hover::after {
 }
 
 @media (min-width: 576px) {
-  .contact-section .contact-items .form-box {
+  main .casting-section .casting .container .offer-explain .h3-anim {
+    padding: 35px;
+    border-radius: 60px;
+    width: 280px;
+    height: 110px;
+  }
+  main .casting-section .casting .container .offer-explain .h3-anim h3 {
+    font-size: 20px;
+  }
+  main .casting-section .casting .container .offer-explain .h3-anim::after {
+    content: "";
+    position: absolute;
+    top: -120px;
+    left: -400px;
+    width: 250px;
+    height: 350px;
+  }
+  main .casting-section .casting .container .offer-explain .pictures-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: space-around;
+    width: 100%;
+    background-color: #bfbfbf;
+  }
+  main .casting-section .casting .container .offer-explain .pictures-container .img1 {
+    width: 280px;
+    height: 300px;
+    background-color: #e78f8f;
+  }
+  main .casting-section .casting .container .offer-explain .pictures-container .img2 {
+    width: 280px;
+    height: 300px;
+    background-color: #98e78f;
+  }
+  main .casting-section .casting .container .offer-explain .pictures-container .img3 {
+    width: 280px;
+    height: 300px;
+    background-color: #8fcbe7;
+  }
+  main .contact-section .contact-items .form-box {
     padding: 10px;
   }
 }
@@ -1038,6 +1103,25 @@ footer .created-by .created-box p .btn-footer:hover::after {
   main .casting-section .casting .container .casting-offer .offer-picture:hover {
     width: 350px;
     height: 440px;
+  }
+  main .casting-section .casting .container .offer-explain .h3-anim {
+    width: 440px;
+    height: 160px;
+  }
+  main .casting-section .casting .container .offer-explain .h3-anim h3 {
+    font-size: 35px;
+  }
+  main .casting-section .casting .container .offer-explain .h3-anim::after {
+    content: "";
+    position: absolute;
+    top: -120px;
+    left: -400px;
+    width: 250px;
+    height: 350px;
+    background-image: linear-gradient(to top, rgba(59, 66, 197, 0.5882352941) 0%, rgba(169, 129, 187, 0.4470588235) 49%, rgba(255, 201, 169, 0.5843137255) 100%);
+    transform: rotate(30deg);
+    animation: anim-button-casting 2s ease infinite;
+    z-index: -5;
   }
 }
 @media (min-width: 992px) {
