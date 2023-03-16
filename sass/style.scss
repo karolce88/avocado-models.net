@@ -307,8 +307,7 @@ main {
 
 	.gallery-section {
 		position: relative;
-		background-image: url('../img/gallery/pexels-nikolai-ulltang-285284\ \(1\).jpg');
-		height: 800px;
+		background-image: url('../img/gallery/bg.jpg');
 		background-position: center;
 		background-attachment: fixed;
 		background-size: cover;
@@ -326,18 +325,97 @@ main {
 					color: $pure-white;
 				}
 
-				p {
-					color: $pure-white;
+				.gallery-items {
+					width: 100%;
+					margin-bottom: 150px;
+					display: flex;
+					flex-wrap: wrap;
+
+					.mobile-gallery {
+						width: 100%;
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: space-around;
+						margin-top: 60px;
+
+						.img-item {
+							position: relative;
+							width: 280px;
+							height: 280px;
+							align-content: space-between;
+							margin: 20px 20px;
+							display: flex;
+							flex-wrap: wrap;
+							align-content: space-between;
+							background-repeat: no-repeat;
+							background-size: cover;
+							background-position: 50% 50%;
+							border: 2px solid $pure-white;
+							border-radius: 20px;
+							box-shadow: 2px 4px 8px 2px $pure-white;
+							overflow: hidden;
+						}
+
+						.item1 {
+							background-image: url(../img/gallery/1.jpg);
+							background-position: 60% 50%;
+						}
+						.item2 {
+							background-image: url(../img/gallery/2.jpg);
+						}
+						.item3 {
+							background-image: url(../img/gallery/3.jpg);
+							background-position: 50% 30%;
+						}
+						.item4 {
+							background-image: url(../img/gallery/4.jpg);
+							background-position: 50% 10%;
+						}
+						.item5 {
+							background-image: url(../img/gallery/5.jpg);
+							background-position: 50% 0%;
+						}
+						.item6 {
+							background-image: url(../img/gallery/6.jpg);
+						}
+						.item7 {
+							background-image: url(../img/gallery/7.jpg);
+							background-position: 50% 25%;
+						}
+						.item8 {
+							background-image: url(../img/gallery/8.jpg);
+						}
+						.item9 {
+							background-image: url(../img/gallery/9.jpg);
+							background-position: 50% 40%;
+						}
+
+						.img-item::after {
+							content: '';
+							position: absolute;
+							width: 100%;
+							height: 100%;
+							background-color: #ffffff17;
+							transition: all .3s;
+						}
+
+						.img-item:hover::after {
+							background-color: #d0d0d087;
+							
+						}
+					}
 				}
 			}
 		}
 
-		.section-anim-bottom {
-			@include section-bottom;
-		}
-
 		.section-anim-top {
 			@include section-top;
+			height: 80px;
+		}
+
+		.section-anim-bottom {
+			@include section-bottom;
+			height: 80px;
 		}
 	}
 
@@ -347,7 +425,7 @@ main {
 		top: 0px;
 		width: 100%;
 		height: 100%;
-		background-color: rgba(0, 0, 0, 0.6);
+		background-color: rgba(0, 0, 0, 0.7);
 	}
 
 	.casting-section {
@@ -398,10 +476,10 @@ main {
 							display: flex;
 							justify-content: center;
 							align-items: center;
-							width: 300px;
-							height: 360px;
-							padding: 20px;
+							width: 275px;
+							height: 350px;
 							border-radius: 35px;
+							box-shadow: 0px 6px 10px $black-text;
 						}
 					}
 				}
@@ -452,18 +530,19 @@ main {
 						height: 350px;
 						background-image: linear-gradient(to top, #3b42c596 0%, #a981bb72 49%, #ffc9a995 100%);
 						transform: rotate(30deg);
-						animation: anim-button-casting 2s ease infinite;
+						animation: anim-button-casting 5s ease infinite;
 						z-index: -5;
 					}
 
 					.text {
-						padding: 5px 0;
+						padding: 10px 0;
 						color: $black-text;
 						text-align: center;
 					}
 
 					.bold {
 						font-weight: bold;
+						font-size: 22px;
 					}
 
 					.send-offer {
@@ -493,7 +572,7 @@ main {
 						}
 
 						.text {
-							padding: 5px 0;
+							padding: 10px 0;
 							color: $black-text;
 						}
 					}
@@ -516,7 +595,7 @@ main {
 							border: 1px solid $black-text;
 							border-radius: 15px;
 							margin: 30px 25px;
-							box-shadow: 2px 2px 15px $black-text;
+							box-shadow: 0px 6px 10px 1px $black-text;
 							overflow: hidden;
 
 							.img1 {
@@ -544,6 +623,14 @@ main {
 								background-size: contain;
 							}
 
+							.img-hover-scale{
+								transition: all .3s;
+							}
+
+							.img-hover-scale:hover{
+								transform: scale(1.1);
+							}
+
 							.img-text {
 								display: flex;
 								flex-direction: column;
@@ -556,12 +643,12 @@ main {
 
 								h4 {
 									padding-bottom: 6px;
-									color: $black-text
+									color: $black-text;
 								}
 
 								p {
 									text-align: center;
-									color: $black-text
+									color: $black-text;
 								}
 							}
 						}
@@ -571,15 +658,20 @@ main {
 							content: '';
 							width: 100%;
 							height: 100%;
-							background-color: #9e9d9d48;
+							background-color: #00000026;
 							top: 0;
 							left: 0;
-							// z-index: 0;
+							transition: all 0.3s;
 						}
 
 						.box-img:hover::before {
 							background-color: #dfdfdfa4;
 							z-index: -1;
+						}
+
+						.box-img:hover .img-text {
+							background-color: #ffffffd5;
+							border-radius: 5%;
 						}
 					}
 
@@ -587,7 +679,6 @@ main {
 						margin-bottom: 60px;
 
 						.btn {
-
 							a {
 								font-weight: bold;
 								font-size: 18px;
@@ -1055,7 +1146,6 @@ footer {
 								align-items: center;
 								width: 360px;
 								height: 420px;
-								padding: 20px;
 								border-radius: 35px;
 							}
 						}
@@ -1172,7 +1262,6 @@ footer {
 								align-items: center;
 								width: 360px;
 								height: 420px;
-								padding: 20px;
 								border-radius: 35px;
 							}
 						}
@@ -1356,7 +1445,6 @@ footer {
 								align-items: center;
 								width: 360px;
 								height: 420px;
-								padding: 20px;
 								border-radius: 35px;
 							}
 						}
@@ -1395,7 +1483,6 @@ footer {
 								align-items: center;
 								width: 360px;
 								height: 420px;
-								padding: 20px;
 								border-radius: 35px;
 							}
 						}

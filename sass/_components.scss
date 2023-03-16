@@ -194,10 +194,10 @@
 // animation for button in casting section:
 
 @keyframes anim-button-casting {
-	from{
+	0% {
 		left: -400px;
 	}
-	to {
+	100% {
 		left: 500px;
 	}
 }
