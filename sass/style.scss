@@ -352,14 +352,14 @@ main {
 
 	.casting-section {
 		scroll-margin-top: 49px;
-		height: 3000px;
+		display: flex;
 
 		.casting {
 			.container {
 				display: flex;
 				flex-direction: column;
 				align-items: center;
-				align-content: space-evenly;  
+				align-content: space-evenly;
 				padding: 15px;
 
 				h1 {
@@ -369,11 +369,17 @@ main {
 				.casting-offer {
 					display: flex;
 					justify-content: space-evenly;
+					align-items: center;
 					flex-wrap: wrap;
 
 					.offer-text {
-						width: 700px;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+						width: 80%;
 						color: $black-text;
+						margin-bottom: 20px;
 
 						h3 {
 							padding-bottom: 15px;
@@ -385,12 +391,15 @@ main {
 						display: flex;
 						justify-content: center;
 						align-items: center;
-						width: 450px;
-						height: 500px;
+						width: 300px;
+						height: 380px;
 
 						.offer-picture {
-							width: 330px;
-							height: 400px;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							width: 300px;
+							height: 360px;
 							padding: 20px;
 							border-radius: 35px;
 						}
@@ -408,23 +417,24 @@ main {
 					flex-direction: column;
 					justify-content: center;
 					align-items: center;
+					flex-wrap: wrap;
 					width: 100%;
-					height: 600px;
 					padding: 40px 0;
 
 					.h3-anim {
 						position: relative;
 						padding: 35px;
 						border-radius: 60px;
-						width: 280px;
-						height: 110px;
+						width: 260px;
+						height: 60px;
 						overflow: hidden;
 						display: flex;
-						justify-items: center;
+						justify-content: center;
 						z-index: 1;
+						margin-bottom: 25px;
 
 						h3 {
-							font-size: 20px;
+							font-size: 18px;
 							display: flex;
 							justify-content: center;
 							align-items: center;
@@ -449,6 +459,7 @@ main {
 					.text {
 						padding: 5px 0;
 						color: $black-text;
+						text-align: center;
 					}
 
 					.bold {
@@ -460,6 +471,7 @@ main {
 						flex-direction: column;
 						justify-content: center;
 						align-items: center;
+						flex-wrap: wrap;
 						width: 100%;
 
 						a {
@@ -488,27 +500,98 @@ main {
 
 					.pictures-container {
 						display: flex;
-						justify-content: space-around;
+						justify-content: center;
 						flex-wrap: wrap;
-						align-content: space-around;
+						align-items: stretch;
 						width: 100%;
-						height: auto;
-						background-color: #bfbfbf;
+						margin: 60px 0;
 
-						.img1 {
-							width: 280px;
-							height: 300px;
-							background-color: #e78f8f;
+						.box-img {
+							position: relative;
+							display: flex;
+							flex-direction: column;
+							justify-content: center;
+							align-items: center;
+							width: 300px;
+							border: 1px solid $black-text;
+							border-radius: 15px;
+							margin: 30px 25px;
+							box-shadow: 2px 2px 15px $black-text;
+							overflow: hidden;
+
+							.img1 {
+								width: 270px;
+								margin-top: 15px;
+								height: 300px;
+								background-image: url(../img/casting/girl-gdb45a5f6d_1920.png);
+								background-position: center;
+								background-size: contain;
+							}
+							.img2 {
+								width: 270px;
+								margin-top: 15px;
+								height: 300px;
+								background-image: url(../img/casting/girl-g36fa22ae1_1920.png);
+								background-position: center;
+								background-size: contain;
+							}
+							.img3 {
+								width: 270px;
+								margin-top: 15px;
+								height: 300px;
+								background-image: url(../img/casting/back.png);
+								background-position: center;
+								background-size: contain;
+							}
+
+							.img-text {
+								display: flex;
+								flex-direction: column;
+								justify-content: center;
+								align-items: center;
+								width: 100%;
+								height: 80px;
+								margin: 20px;
+								z-index: 1;
+
+								h4 {
+									padding-bottom: 6px;
+									color: $black-text
+								}
+
+								p {
+									text-align: center;
+									color: $black-text
+								}
+							}
 						}
-						.img2 {
-							width: 280px;
-							height: 300px;
-							background-color: #98e78f;
+
+						.box-img::before {
+							position: absolute;
+							content: '';
+							width: 100%;
+							height: 100%;
+							background-color: #9e9d9d48;
+							top: 0;
+							left: 0;
+							// z-index: 0;
 						}
-						.img3 {
-							width: 280px;
-							height: 300px;
-							background-color: #8fcbe7;
+
+						.box-img:hover::before {
+							background-color: #dfdfdfa4;
+							z-index: -1;
+						}
+					}
+
+					.send-offer {
+						margin-bottom: 60px;
+
+						.btn {
+
+							a {
+								font-weight: bold;
+								font-size: 18px;
+							}
 						}
 					}
 				}
@@ -667,12 +750,14 @@ main {
 										border: 1px solid transparent;
 										background-color: transparent;
 										border-radius: 8px;
-										padding: 10px 22px;
+										padding: 7px 20px;
 										cursor: pointer;
 										color: $black-text;
 										text-transform: uppercase;
 										letter-spacing: 1px;
 										overflow: hidden;
+										display: flex;
+										justify-content: center;
 										transition: all 0.2s;
 									}
 
@@ -950,18 +1035,45 @@ footer {
 		.casting-section {
 			.casting {
 				.container {
+					.casting-offer {
+						.offer-text {
+							width: 80%;
+							height: 60%;
+							margin-bottom: 60px;
+						}
+
+						.offer-img {
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							width: 350px;
+							height: 400px;
+
+							.offer-picture {
+								display: flex;
+								justify-content: center;
+								align-items: center;
+								width: 360px;
+								height: 420px;
+								padding: 20px;
+								border-radius: 35px;
+							}
+						}
+					}
+
 					.offer-explain {
 						.h3-anim {
 							padding: 35px;
 							border-radius: 60px;
-							width: 280px;
-							height: 110px;
-	
+							width: 390px;
+							height: 70px;
+							margin-bottom: 30px;
+
 							h3 {
-								font-size: 20px;
+								font-size: 24px;
 							}
 						}
-	
+
 						.h3-anim::after {
 							content: '';
 							position: absolute;
@@ -970,37 +1082,32 @@ footer {
 							width: 250px;
 							height: 350px;
 						}
-	
+
 						.pictures-container {
 							display: flex;
 							justify-content: space-around;
 							flex-wrap: wrap;
 							align-content: space-around;
 							width: 100%;
-							background-color: #bfbfbf;
-	
+
 							.img1 {
 								width: 280px;
 								height: 300px;
-								background-color: #e78f8f;
 							}
 							.img2 {
 								width: 280px;
 								height: 300px;
-								background-color: #98e78f;
 							}
 							.img3 {
 								width: 280px;
 								height: 300px;
-								background-color: #8fcbe7;
 							}
 						}
 					}
 				}
 			}
 		}
-		
-		
+
 		.contact-section {
 			.contact-items {
 				.form-box {
@@ -1046,56 +1153,39 @@ footer {
 				.container {
 					padding: 15px;
 
-					h1 {
-						@include h1-style;
-					}
-
 					.casting-offer {
-						display: flex;
-						justify-content: space-evenly;
-						flex-wrap: nowrap;
-
 						.offer-text {
-							display: flex;
-							flex-direction: column;
-							justify-content: center;
-							width: 520px;
-
-							h3 {
-								padding-bottom: 15px;
-							}
+							width: 70%;
+							height: 90%;
 						}
 
 						.offer-img {
-							width: 400px;
-							height: 520px;
 							display: flex;
 							justify-content: center;
-							display: flex;
-							flex-direction: column;
-							justify-content: center;
+							align-items: center;
+							width: 430px;
+							height: 400px;
 
 							.offer-picture {
+								display: flex;
+								justify-content: center;
+								align-items: center;
 								width: 360px;
-								height: 450px;
-								padding: 10px;
-								margin: 10px;
-								border-radius: 20px;
+								height: 420px;
+								padding: 20px;
+								border-radius: 35px;
 							}
-						}
-						.offer-picture:hover {
-							width: 350px;
-							height: 440px;
 						}
 					}
 
 					.offer-explain {
 						.h3-anim {
 							width: 440px;
-							height: 160px;
+							height: 90px;
+							margin-bottom: 30px;
 
 							h3 {
-								font-size: 35px;
+								font-size: 32px;
 							}
 						}
 
@@ -1247,48 +1337,27 @@ footer {
 
 			.casting {
 				.container {
-					padding: 15px;
-
-					h1 {
-						@include h1-style;
-					}
-
 					.casting-offer {
-						display: flex;
-						justify-content: space-evenly;
-						flex-wrap: nowrap;
-
 						.offer-text {
-							display: flex;
-							flex-direction: column;
-							justify-content: center;
-							width: 520px;
-
-							h3 {
-								padding-bottom: 15px;
-							}
+							width: 500px;
+							height: 500px;
 						}
 
 						.offer-img {
 							display: flex;
-							flex-direction: column;
 							justify-content: center;
 							align-items: center;
-							width: 480px;
-							height: 520px;
-							display: flex;
-							justify-content: center;
+							width: 430px;
+							height: 400px;
 
 							.offer-picture {
-								width: 450px;
-								height: 520px;
-								padding: 10px;
-								border-radius: 20px;
-							}
-
-							.offer-picture:hover {
-								width: 440px;
-								height: 510px;
+								display: flex;
+								justify-content: center;
+								align-items: center;
+								width: 360px;
+								height: 420px;
+								padding: 20px;
+								border-radius: 35px;
 							}
 						}
 					}
@@ -1307,47 +1376,27 @@ footer {
 				.container {
 					padding: 15px;
 
-					h1 {
-						@include h1-style;
-					}
-
 					.casting-offer {
-						display: flex;
-						justify-content: space-evenly;
-						flex-wrap: nowrap;
-
 						.offer-text {
-							display: flex;
-							flex-direction: column;
-							justify-content: center;
-							width: 550px;
-
-							h3 {
-								padding-bottom: 15px;
-							}
+							width: 560px;
+							height: 500px;
 						}
 
 						.offer-img {
 							display: flex;
-							flex-direction: column;
 							justify-content: center;
 							align-items: center;
-							width: 600px;
-							height: 700px;
-							display: flex;
-							justify-content: center;
+							width: 450px;
+							height: 300px;
 
 							.offer-picture {
-								position: relative;
-								width: 560px;
-								height: 680px;
-								padding: 10px;
-								border-radius: 20px;
-							}
-
-							.offer-picture:hover {
-								width: 550px;
-								height: 670px;
+								display: flex;
+								justify-content: center;
+								align-items: center;
+								width: 360px;
+								height: 420px;
+								padding: 20px;
+								border-radius: 35px;
 							}
 						}
 					}
