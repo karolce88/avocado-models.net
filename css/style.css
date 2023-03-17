@@ -486,10 +486,14 @@ main .gallery-section .gallery .container .gallery-items .mobile-gallery .img-it
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-  border: 3px solid rgba(31, 29, 29, 0.7411764706);
+  border: 3px solid rgba(40, 39, 39, 0.8470588235);
   border-radius: 20px;
-  box-shadow: 3px 6px 8px 2px rgba(31, 29, 29, 0.7411764706);
+  box-shadow: 4px 8px 10px 2px rgba(40, 39, 39, 0.8470588235);
   overflow: hidden;
+  transition: all 0.4s;
+}
+main .gallery-section .gallery .container .gallery-items .mobile-gallery .img-item:hover {
+  transform: scale(1.2);
 }
 main .gallery-section .gallery .container .gallery-items .mobile-gallery .item1 {
   background-image: url(../img/gallery/1.jpg);
@@ -529,11 +533,11 @@ main .gallery-section .gallery .container .gallery-items .mobile-gallery .img-it
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.0156862745);
+  background-color: rgba(0, 0, 0, 0.3333333333);
   transition: all 0.3s;
 }
 main .gallery-section .gallery .container .gallery-items .mobile-gallery .img-item:hover::after {
-  background-color: rgba(0, 0, 0, 0.3333333333);
+  background-color: rgba(0, 0, 0, 0.0156862745);
 }
 main .gallery-section .section-anim-top {
   position: absolute;
@@ -563,7 +567,7 @@ main .gallery-section::after {
   top: 0px;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 main .casting-section {
   scroll-margin-top: 49px;
@@ -759,7 +763,6 @@ main .casting-section .casting .container .offer-explain .pictures-container .bo
   margin: 30px 25px;
   box-shadow: 0px 6px 10px 1px #585658;
   overflow: hidden;
-  transition: all 0.3s;
 }
 main .casting-section .casting .container .offer-explain .pictures-container .box-img .img1 {
   width: 270px;
@@ -768,7 +771,6 @@ main .casting-section .casting .container .offer-explain .pictures-container .bo
   background-image: url(../img/casting/girl-gdb45a5f6d_1920.png);
   background-position: center;
   background-size: contain;
-  z-index: 3;
 }
 main .casting-section .casting .container .offer-explain .pictures-container .box-img .img2 {
   width: 270px;
@@ -777,7 +779,6 @@ main .casting-section .casting .container .offer-explain .pictures-container .bo
   background-image: url(../img/casting/girl-g36fa22ae1_1920.png);
   background-position: center;
   background-size: contain;
-  z-index: 3;
 }
 main .casting-section .casting .container .offer-explain .pictures-container .box-img .img3 {
   width: 270px;
@@ -786,10 +787,13 @@ main .casting-section .casting .container .offer-explain .pictures-container .bo
   background-image: url(../img/casting/back.png);
   background-position: center;
   background-size: contain;
-  z-index: 3;
 }
 main .casting-section .casting .container .offer-explain .pictures-container .box-img .img-hover-scale {
   transition: all 0.3s;
+  z-index: 3;
+}
+main .casting-section .casting .container .offer-explain .pictures-container .box-img .img-hover-scale:hover {
+  transform: scale(1.1);
 }
 main .casting-section .casting .container .offer-explain .pictures-container .box-img .img-text {
   display: flex;
@@ -797,12 +801,9 @@ main .casting-section .casting .container .offer-explain .pictures-container .bo
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 90px;
+  height: 80px;
   margin: 20px;
-  z-index: 1;
-  background-color: #646a72;
-  border-radius: 5%;
-  padding: 40px 40px;
+  z-index: 4;
 }
 main .casting-section .casting .container .offer-explain .pictures-container .box-img .img-text h4 {
   padding-bottom: 6px;
@@ -817,36 +818,28 @@ main .casting-section .casting .container .offer-explain .pictures-container .bo
   content: "";
   width: 100%;
   height: 100%;
-  background-image: url(../img/offer/bgc.jpg);
-  background-position: 30% 90%;
+  background-color: rgba(0, 0, 0, 0.1490196078);
   top: 0;
   left: 0;
   transition: all 0.3s;
 }
+main .casting-section .casting .container .offer-explain .pictures-container .box-img:hover::before {
+  background-color: rgba(223, 223, 223, 0.6431372549);
+  z-index: -1;
+}
 main .casting-section .casting .container .offer-explain .pictures-container .box-img::after {
   position: absolute;
   content: "";
-  width: 10px;
-  height: 10px;
-  background-color: #646a72;
-  -webkit-clip-path: circle(50% at 50% 50%);
-          clip-path: circle(50% at 50% 50%);
-  bottom: -140px;
-  left: -50px;
-  transition: all 0.3s;
-}
-main .casting-section .casting .container .offer-explain .pictures-container .box-img:hover::after {
   width: 400px;
   height: 400px;
-  -webkit-clip-path: circle(50% at 50% 50%);
-          clip-path: circle(50% at 50% 50%);
+  background-color: #9d9d9d;
+  bottom: -285px;
+  left: -50px;
+  transition: all 0.3s;
+  border-radius: 50%;
 }
-main .casting-section .casting .container .offer-explain .pictures-container .box-img:hover .img-hover-scale {
-  transform: scale(1.1);
-}
-main .casting-section .casting .container .offer-explain .pictures-container .box-img:hover::before {
-  background-color: rgba(207, 21, 21, 0.306);
-  z-index: -1;
+main .casting-section .casting .container .offer-explain .pictures-container .box-img:hover::after {
+  bottom: -150px;
 }
 main .casting-section .casting .container .offer-explain .send-offer {
   margin-bottom: 60px;
@@ -1088,7 +1081,7 @@ main .contact-section .section-anim-bottom {
   right: -60px;
   z-index: 1;
   transform: skew(-55deg);
-  background-color: #373434;
+  background-color: #393939;
 }
 main .contact-section .section-anim-top {
   position: absolute;
@@ -1111,7 +1104,7 @@ main .contact-section::after {
 }
 
 footer {
-  background-color: #373434;
+  background-color: #393939;
 }
 footer .container {
   display: flex;
@@ -1250,7 +1243,7 @@ footer .container .menu .menu-items ul li .btn-footer:hover::after {
 }
 footer .created-by {
   width: 100%;
-  background-color: rgba(31, 29, 29, 0.7411764706);
+  background-color: #0d0d0d;
 }
 footer .created-by .line {
   margin: 0 auto;
