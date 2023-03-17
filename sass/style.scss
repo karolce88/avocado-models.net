@@ -240,6 +240,7 @@ body {
 				letter-spacing: 1px;
 				overflow: hidden;
 				transition: all 0.2s;
+				animation: shake 0.9s both;
 			}
 
 			.btn-cta:hover {
@@ -288,9 +289,13 @@ main {
 			height: 800px;
 
 			.container {
-				h1 {
+				.head-br {
 					@include h1-style;
 					padding: 70px 0 0;
+				}
+
+				.head-br::after {
+					@include h1-break-line;
 				}
 
 				.offer-items {
@@ -320,9 +325,15 @@ main {
 			.container {
 				padding: 15px;
 
-				h1 {
+				.head-br {
 					@include h1-style;
 					color: $pure-white;
+				}
+
+				.head-br::after {
+					@include h1-break-line;
+					bottom: 35px;
+					right: 510px;
 				}
 
 				.gallery-items {
@@ -340,8 +351,8 @@ main {
 
 						.img-item {
 							position: relative;
-							width: 280px;
-							height: 280px;
+							width: 320px;
+							height: 300px;
 							align-content: space-between;
 							margin: 20px 20px;
 							display: flex;
@@ -350,9 +361,9 @@ main {
 							background-repeat: no-repeat;
 							background-size: cover;
 							background-position: 50% 50%;
-							border: 2px solid $pure-white;
+							border: 3px solid $bgc-footer;
 							border-radius: 20px;
-							box-shadow: 2px 4px 8px 2px $pure-white;
+							box-shadow: 3px 6px 8px 2px $bgc-footer;
 							overflow: hidden;
 						}
 
@@ -395,13 +406,12 @@ main {
 							position: absolute;
 							width: 100%;
 							height: 100%;
-							background-color: #ffffff17;
-							transition: all .3s;
+							background-color: #00000004;
+							transition: all 0.3s;
 						}
 
 						.img-item:hover::after {
-							background-color: #d0d0d087;
-							
+							background-color: #00000055;
 						}
 					}
 				}
@@ -425,7 +435,7 @@ main {
 		top: 0px;
 		width: 100%;
 		height: 100%;
-		background-color: rgba(0, 0, 0, 0.7);
+		background-color: rgba(0, 0, 0, 0.4);
 	}
 
 	.casting-section {
@@ -440,8 +450,13 @@ main {
 				align-content: space-evenly;
 				padding: 15px;
 
-				h1 {
+				.head-br {
 					@include h1-style;
+				}
+
+				.head-br::after {
+					@include h1-break-line;
+					bottom: 35px;
 				}
 
 				.casting-offer {
@@ -530,7 +545,7 @@ main {
 						height: 350px;
 						background-image: linear-gradient(to top, #3b42c596 0%, #a981bb72 49%, #ffc9a995 100%);
 						transform: rotate(30deg);
-						animation: anim-button-casting 5s ease infinite;
+						animation: anim-button-casting 2s ease infinite;
 						z-index: -5;
 					}
 
@@ -597,6 +612,7 @@ main {
 							margin: 30px 25px;
 							box-shadow: 0px 6px 10px 1px $black-text;
 							overflow: hidden;
+							transition: all 0.3s;
 
 							.img1 {
 								width: 270px;
@@ -605,6 +621,7 @@ main {
 								background-image: url(../img/casting/girl-gdb45a5f6d_1920.png);
 								background-position: center;
 								background-size: contain;
+								z-index: 3;
 							}
 							.img2 {
 								width: 270px;
@@ -613,6 +630,7 @@ main {
 								background-image: url(../img/casting/girl-g36fa22ae1_1920.png);
 								background-position: center;
 								background-size: contain;
+								z-index: 3;
 							}
 							.img3 {
 								width: 270px;
@@ -621,14 +639,11 @@ main {
 								background-image: url(../img/casting/back.png);
 								background-position: center;
 								background-size: contain;
+								z-index: 3;
 							}
 
-							.img-hover-scale{
-								transition: all .3s;
-							}
-
-							.img-hover-scale:hover{
-								transform: scale(1.1);
+							.img-hover-scale {
+								transition: all 0.3s;
 							}
 
 							.img-text {
@@ -637,18 +652,21 @@ main {
 								justify-content: center;
 								align-items: center;
 								width: 100%;
-								height: 80px;
+								height: 90px;
 								margin: 20px;
 								z-index: 1;
+								background-color: $casting-offer-img;
+								border-radius: 5%;
+								padding: 40px 40px;
 
 								h4 {
 									padding-bottom: 6px;
-									color: $black-text;
+									color: $pure-white;
 								}
 
 								p {
 									text-align: center;
-									color: $black-text;
+									color: $pure-white;
 								}
 							}
 						}
@@ -658,20 +676,38 @@ main {
 							content: '';
 							width: 100%;
 							height: 100%;
-							background-color: #00000026;
+							background-image: url(../img/offer/bgc.jpg);
+							background-position: 30% 90%;
 							top: 0;
 							left: 0;
 							transition: all 0.3s;
 						}
 
-						.box-img:hover::before {
-							background-color: #dfdfdfa4;
-							z-index: -1;
+						.box-img::after {
+							position: absolute;
+							content: '';
+							width: 10px;
+							height: 10px;
+							background-color: $casting-offer-img;
+							clip-path: circle(50% at 50% 50%);
+							bottom: -140px;
+							left: -50px;
+							transition: all 0.3s;
 						}
 
-						.box-img:hover .img-text {
-							background-color: #ffffffd5;
-							border-radius: 5%;
+						.box-img:hover::after {
+							width: 400px;
+							height: 400px;
+							clip-path: circle(50% at 50% 50%);
+						}
+
+						.box-img:hover .img-hover-scale {
+							transform: scale(1.1);
+						}
+
+						.box-img:hover::before {
+							background-color: rgba(207, 21, 21, 0.306);
+							z-index: -1;
 						}
 					}
 
@@ -705,9 +741,15 @@ main {
 			z-index: 1;
 
 			.container {
-				h1 {
+				.head-br {
 					@include h1-style;
 					color: $pure-white;
+				}
+
+				.head-br::after {
+					@include h1-break-line;
+					bottom: 30px;
+					right: 540px;
 				}
 
 				.contact-items {
