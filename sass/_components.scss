@@ -16,7 +16,7 @@
 //buregr icon - animations:
 
 @mixin anim-btn2 {
-	animation: animation-btn2 .4s ease-in forwards ;
+	animation: animation-btn2 0.4s ease-in forwards;
 }
 @keyframes animation-btn2 {
 	from {
@@ -28,11 +28,10 @@
 }
 
 @mixin anim-btn1 {
-	animation: animation-btn1 .4s ease-in forwards ;
+	animation: animation-btn1 0.4s ease-in forwards;
 }
 @keyframes animation-btn1 {
 	from {
-		
 	}
 	to {
 		transform: rotate(45deg);
@@ -41,11 +40,10 @@
 }
 
 @mixin anim-btn3 {
-	animation: animation-btn3 .4s ease-in forwards ;
+	animation: animation-btn3 0.4s ease-in forwards;
 }
 @keyframes animation-btn3 {
 	from {
-		
 	}
 	to {
 		transform: rotate(-45deg);
@@ -56,7 +54,7 @@
 //buregr icon - animations - rev:
 
 @mixin anim-btn2-rev {
-	animation: animation-btn2-rev .4s ease-in forwards ;
+	animation: animation-btn2-rev 0.4s ease-in forwards;
 }
 @keyframes animation-btn2-rev {
 	from {
@@ -68,7 +66,7 @@
 }
 
 @mixin anim-btn1-rev {
-	animation: animation-btn1-rev .4s ease-in forwards ;
+	animation: animation-btn1-rev 0.4s ease-in forwards;
 }
 @keyframes animation-btn1-rev {
 	from {
@@ -76,12 +74,11 @@
 		transform-origin: -5% 220%;
 	}
 	to {
-
 	}
 }
 
 @mixin anim-btn3-rev {
-	animation: animation-btn3-rev .4s ease-in forwards;
+	animation: animation-btn3-rev 0.4s ease-in forwards;
 }
 @keyframes animation-btn3-rev {
 	from {
@@ -89,14 +86,13 @@
 		transform-origin: -2% -110%;
 	}
 	to {
-
 	}
 }
 
 // mobile menu anim:
 
 @mixin mobile-menu-anim {
-	animation: animation-menu .8s ease forwards;
+	animation: animation-menu 0.8s ease forwards;
 }
 
 @keyframes animation-menu {
@@ -109,7 +105,7 @@
 }
 
 @mixin mobile-menu-anim-rev {
-	animation: animation-menu-rev .8s ease forwards;
+	animation: animation-menu-rev 0.8s ease forwards;
 }
 
 @keyframes animation-menu-rev {
@@ -122,7 +118,7 @@
 }
 
 @mixin mobile-menu-text {
-	animation: mobile-menu-text-anim .9s ease  forwards;
+	animation: mobile-menu-text-anim 0.9s ease forwards;
 }
 
 @keyframes mobile-menu-text-anim {
@@ -131,6 +127,19 @@
 	}
 	to {
 		right: 0%;
+	}
+}
+
+// h1 header animation::after
+
+@keyframes h1-header-anim {
+	from {
+		transform: rotateY(0deg);
+		opacity: 1;
+		// filter: blur(0px);
+	}
+	to {
+		transform: rotate(-182deg) translate(28%, -37%);
 	}
 }
 
@@ -144,7 +153,7 @@
 	bottom: -1px;
 	right: -60px;
 	z-index: 1;
-    transform: skew(-55deg);
+	transform: skew(-55deg);
 }
 
 @mixin section-top {
@@ -155,7 +164,7 @@
 	top: 0px;
 	left: -150px;
 	z-index: 1;
-    transform: skew(-55deg);
+	transform: skew(-55deg);
 }
 
 // main sections:
@@ -185,6 +194,20 @@
 	border-bottom: 30px solid $main-green;
 	z-index: -1;
 	border-radius: 20px;
+}
+
+// h3 break line
+
+@mixin h3-break-line {
+	position: absolute;
+	content: '';
+	width: 250px;
+	height: 150px;
+	bottom: -131px;
+	left: -75px;
+	clip-path: polygon(30% 0, 61% 0, 44% 4%, 18% 7%);
+	background-color: $main-green;
+	z-index: -1;
 }
 
 // link hover for after element:
@@ -221,25 +244,24 @@
 
 @keyframes shake {
 	0% {
-	  transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
 	}
 	30% {
-	  transform: scale3d(1.25, 0.75, 1);
+		transform: scale3d(1.25, 0.75, 1);
 	}
 	40% {
-	  transform: scale3d(0.75, 1.25, 1);
+		transform: scale3d(0.75, 1.25, 1);
 	}
 	50% {
-	  transform: scale3d(1.15, 0.85, 1);
+		transform: scale3d(1.15, 0.85, 1);
 	}
 	65% {
-	  transform: scale3d(0.95, 1.05, 1);
+		transform: scale3d(0.95, 1.05, 1);
 	}
 	75% {
-	  transform: scale3d(1.05, 0.95, 1);
+		transform: scale3d(1.05, 0.95, 1);
 	}
 	100% {
-	  transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
 	}
-  }
-  
+}

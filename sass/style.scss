@@ -208,18 +208,28 @@ body {
 			flex-direction: column;
 			align-items: center;
 
-			h1 {
-				font-size: 28px;
+			.h1-header {
 				padding-bottom: 10px;
 				color: $pure-white;
 				letter-spacing: 5px;
 				font-family: 'Open Sans-bold';
 				font-weight: bold;
+				font-size: 28px;
 			}
 
 			span {
+				position: relative;
+				display: inline-block;
+			}
+
+			.green {
 				color: $main-green;
 			}
+
+			.rotate-anim {
+				animation: h1-header-anim 2s 1s linear forwards;
+			}
+
 
 			p {
 				color: $pure-white;
@@ -240,7 +250,7 @@ body {
 				letter-spacing: 1px;
 				overflow: hidden;
 				transition: all 0.2s;
-				animation: shake 0.9s both;
+				animation: shake 1.2s ease 1s 3 both;
 			}
 
 			.btn-cta:hover {
@@ -435,7 +445,7 @@ main {
 		top: 0px;
 		width: 100%;
 		height: 100%;
-		background-color: rgba(0, 0, 0, 0.4);
+		background-color: rgba(0, 0, 0, 0.5);
 	}
 
 	.casting-section {
@@ -550,9 +560,15 @@ main {
 					}
 
 					.text {
+						position: relative;
 						padding: 10px 0;
 						color: $black-text;
 						text-align: center;
+						z-index: 1;
+					}
+
+					.br::after {
+						@include h3-break-line;
 					}
 
 					.bold {
@@ -853,6 +869,13 @@ main {
 								justify-content: center;
 								color: $pure-white;
 								padding-bottom: 20px;
+								z-index: 3;
+							}
+
+							.h3header::after {
+								@include h3-break-line;
+								bottom: 326px;
+								left: 530px;
 							}
 
 							.form-items {
@@ -1260,6 +1283,17 @@ footer {
 
 				h1 {
 					font-size: 36px;
+				}
+
+				.br {
+					position: relative;
+					z-index: 3;
+				}
+
+				.br::after {
+					@include h3-break-line;
+					bottom: -102px;
+					left: -15px;
 				}
 			}
 		}
