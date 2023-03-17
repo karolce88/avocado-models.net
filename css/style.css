@@ -804,7 +804,7 @@ main .casting-section .casting .container .offer-explain .pictures-container .bo
   height: 80px;
   margin: 20px;
   z-index: 4;
-  background-color: rgba(157, 157, 157, 0.8941176471);
+  background-color: #9d9d9d;
   border-radius: 5%;
 }
 main .casting-section .casting .container .offer-explain .pictures-container .box-img .img-text h4 {
@@ -834,7 +834,7 @@ main .casting-section .casting .container .offer-explain .pictures-container .bo
   content: "";
   width: 0px;
   height: 0px;
-  background-color: #a5a5a5;
+  background-color: #9d9d9d;
   bottom: -90px;
   left: -25px;
   transition: all 0.4s;
