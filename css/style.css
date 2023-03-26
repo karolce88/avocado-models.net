@@ -100,10 +100,14 @@
 }
 @keyframes anim-button-casting {
   0% {
-    left: -400px;
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.4;
   }
   100% {
-    left: 500px;
+    opacity: 0;
+    transform: scale(1.2);
   }
 }
 @keyframes shake {
@@ -127,6 +131,22 @@
   }
   100% {
     transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes rotate-left {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes rotate-right {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 *,
@@ -573,6 +593,9 @@ main .casting-section {
   scroll-margin-top: 49px;
   display: flex;
 }
+main .casting-section .bg-animations {
+  display: none;
+}
 main .casting-section .casting .container {
   display: flex;
   flex-direction: column;
@@ -623,6 +646,21 @@ main .casting-section .casting .container .casting-offer .offer-text h3 {
   padding-bottom: 15px;
   color: #585658;
 }
+main .casting-section .casting .container .casting-offer .offer-text p {
+  padding: 12px 0;
+  margin: 0;
+  width: 100%;
+}
+main .casting-section .casting .container .casting-offer .offer-text ul {
+  width: 80%;
+}
+main .casting-section .casting .container .casting-offer .offer-text ul li {
+  padding: 2px 0;
+}
+main .casting-section .casting .container .casting-offer .offer-text h4 {
+  width: 100%;
+  padding: 20px 0 12px 0px;
+}
 main .casting-section .casting .container .casting-offer .offer-img {
   display: flex;
   justify-content: center;
@@ -653,19 +691,19 @@ main .casting-section .casting .container .offer-explain {
   width: 100%;
   padding: 40px 0;
 }
-main .casting-section .casting .container .offer-explain .h3-anim {
+main .casting-section .casting .container .offer-explain .h3-animation {
   position: relative;
   padding: 35px;
-  border-radius: 60px;
+  border-radius: 50%;
   width: 260px;
   height: 60px;
-  overflow: hidden;
+  border: 2px solid #585658;
   display: flex;
   justify-content: center;
   z-index: 1;
   margin-bottom: 25px;
 }
-main .casting-section .casting .container .offer-explain .h3-anim h3 {
+main .casting-section .casting .container .offer-explain .h3-animation h3 {
   font-size: 18px;
   display: flex;
   justify-content: center;
@@ -673,17 +711,31 @@ main .casting-section .casting .container .offer-explain .h3-anim h3 {
   color: #585658;
   z-index: 5;
 }
-main .casting-section .casting .container .offer-explain .h3-anim::after {
+main .casting-section .casting .container .offer-explain .h3-animation::after {
   content: "";
   position: absolute;
-  top: -120px;
-  left: -400px;
-  width: 250px;
-  height: 350px;
-  background-image: linear-gradient(to top, rgba(59, 66, 197, 0.5882352941) 0%, rgba(169, 129, 187, 0.4470588235) 49%, rgba(255, 201, 169, 0.5843137255) 100%);
-  transform: rotate(30deg);
-  animation: anim-button-casting 2s ease infinite;
-  z-index: -5;
+  padding: 33px;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #585658;
+  border-radius: 50%;
+  animation: anim-button-casting 2s infinite linear;
+}
+main .casting-section .casting .container .offer-explain .h3-animation::before {
+  content: "";
+  position: absolute;
+  padding: 33px;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #585658;
+  border-radius: 50%;
+  animation: anim-button-casting 2s infinite 1s linear;
 }
 main .casting-section .casting .container .offer-explain .text {
   position: relative;
@@ -859,6 +911,9 @@ main .contact-section {
   background-size: cover;
   background-position: 5% -10%;
   scroll-margin-top: 50px;
+}
+main .contact-section .bg-animation-contact {
+  display: none;
 }
 main .contact-section .contact {
   position: relative;
@@ -1300,6 +1355,9 @@ footer .created-by .created-box p .btn-footer:hover::after {
 }
 
 @media (min-width: 576px) {
+  main .casting-section .bg-animations {
+    display: none;
+  }
   main .casting-section .casting .container .casting-offer .offer-text {
     width: 80%;
     height: 60%;
@@ -1397,6 +1455,9 @@ footer .created-by .created-box p .btn-footer:hover::after {
   }
   main .casting-section {
     scroll-margin-top: 49px;
+  }
+  main .casting-section .bg-animations {
+    display: none;
   }
   main .casting-section .casting .container {
     padding: 15px;
@@ -1543,7 +1604,11 @@ footer .created-by .created-box p .btn-footer:hover::after {
     font-size: 18px;
   }
   main .casting-section {
+    position: relative;
     scroll-margin-top: 49px;
+  }
+  main .casting-section .bg-animations {
+    display: none;
   }
   main .casting-section .casting .container .casting-offer .offer-text {
     width: 500px;
@@ -1569,6 +1634,23 @@ footer .created-by .created-box p .btn-footer:hover::after {
   main .casting-section {
     scroll-margin-top: 49px;
   }
+  main .casting-section .bg-animations {
+    display: block;
+    position: absolute;
+    top: 37%;
+    right: 70px;
+    width: 180px;
+    height: 180px;
+    opacity: 0.1;
+    z-index: -100;
+    animation: rotate-left 40s infinite linear;
+  }
+  main .casting-section .left {
+    right: 0;
+    left: 70px;
+    top: 44%;
+    animation: rotate-right 40s infinite linear;
+  }
   main .casting-section .casting .container {
     padding: 15px;
   }
@@ -1590,5 +1672,15 @@ footer .created-by .created-box p .btn-footer:hover::after {
     width: 360px;
     height: 420px;
     border-radius: 35px;
+  }
+  main .contact-section .bg-animation-contact {
+    display: block;
+    position: absolute;
+    top: 8%;
+    right: 10%;
+    z-index: 0;
+    opacity: 0.5;
+    width: 120px;
+    animation: rotate-left 45s infinite linear;
   }
 }/*# sourceMappingURL=style.css.map */

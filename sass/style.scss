@@ -457,6 +457,10 @@ main {
 		scroll-margin-top: 49px;
 		display: flex;
 
+		.bg-animations {
+			display: none;
+		}
+
 		.casting {
 			.container {
 				display: flex;
@@ -492,6 +496,25 @@ main {
 						h3 {
 							padding-bottom: 15px;
 							color: $black-text;
+						}
+
+						p {
+							padding: 12px 0;
+							margin: 0;
+							width: 100%;
+						}
+
+						ul {
+							width: 80%;
+
+							li {
+								padding: 2px 0;
+							}
+						}
+
+						h4 {
+							width: 100%;
+							padding: 20px 0 12px 0px;
 						}
 					}
 
@@ -529,13 +552,13 @@ main {
 					width: 100%;
 					padding: 40px 0;
 
-					.h3-anim {
+					.h3-animation {
 						position: relative;
 						padding: 35px;
-						border-radius: 60px;
+						border-radius: 50%;
 						width: 260px;
 						height: 60px;
-						overflow: hidden;
+						border: 2px solid $black-text;
 						display: flex;
 						justify-content: center;
 						z-index: 1;
@@ -551,17 +574,32 @@ main {
 						}
 					}
 
-					.h3-anim::after {
+					.h3-animation::after {
 						content: '';
 						position: absolute;
-						top: -120px;
-						left: -400px;
-						width: 250px;
-						height: 350px;
-						background-image: linear-gradient(to top, #3b42c596 0%, #a981bb72 49%, #ffc9a995 100%);
-						transform: rotate(30deg);
-						animation: anim-button-casting 2s ease infinite;
-						z-index: -5;
+						padding: 33px;
+						top: 0;
+						left: 0;
+						width: 260px;
+						height: 60px;
+						border-radius: 50%;
+						border: 2px solid $black-text;
+						border-radius: 50%;
+						animation: anim-button-casting 2s infinite linear;
+					}
+
+					.h3-animation::before {
+						content: '';
+						position: absolute;
+						padding: 33px;
+						top: 0;
+						left: 0;
+						width: 260px;
+						height: 60px;
+						border-radius: 50%;
+						border: 2px solid $black-text;
+						border-radius: 50%;
+						animation: anim-button-casting 2s infinite 1s linear;
 					}
 
 					.text {
@@ -749,6 +787,10 @@ main {
 		background-size: cover;
 		background-position: 5% -10%;
 		scroll-margin-top: 50px;
+
+		.bg-animation-contact {
+			display: none;
+		}
 
 		.contact {
 			position: relative;
@@ -1188,6 +1230,10 @@ footer {
 @media (min-width: 576px) {
 	main {
 		.casting-section {
+			.bg-animations {
+				display: none;
+			}
+
 			.casting {
 				.container {
 					.casting-offer {
@@ -1313,6 +1359,10 @@ footer {
 	main {
 		.casting-section {
 			scroll-margin-top: 49px;
+
+			.bg-animations {
+				display: none;
+			}
 
 			.casting {
 				.container {
@@ -1497,7 +1547,12 @@ footer {
 
 	main {
 		.casting-section {
+			position: relative;
 			scroll-margin-top: 49px;
+
+			.bg-animations {
+				display: none;
+			}
 
 			.casting {
 				.container {
@@ -1535,6 +1590,25 @@ footer {
 		.casting-section {
 			scroll-margin-top: 49px;
 
+			.bg-animations {
+				display: block;
+				position: absolute;
+				top: 37%;
+				right: 70px;
+				width: 180px;
+				height: 180px;
+				opacity: 0.1;
+				z-index: -100;
+				animation: rotate-left 40s infinite linear;
+			}
+
+			.left {
+				right: 0;
+				left: 70px;
+				top: 44%;
+				animation: rotate-right 40s infinite linear;
+			}
+
 			.casting {
 				.container {
 					padding: 15px;
@@ -1563,6 +1637,19 @@ footer {
 						}
 					}
 				}
+			}
+		}
+
+		.contact-section {
+			.bg-animation-contact {
+				display: block;
+				position: absolute;
+				top: 8%;
+				right: 10%;
+				z-index: 0;
+				opacity: 0.5;
+				width: 120px;
+				animation: rotate-left 45s infinite linear;
 			}
 		}
 	}
