@@ -405,9 +405,10 @@ main {
 }
 main .offer-section {
   scroll-margin-top: 50px;
+  position: relative;
 }
-main .offer-section .offer {
-  height: 800px;
+main .offer-section .bg-dollar {
+  display: none;
 }
 main .offer-section .offer .container .head-br {
   position: relative;
@@ -433,12 +434,140 @@ main .offer-section .offer .container .head-br::after {
   z-index: -1;
   border-radius: 20px;
 }
-main .offer-section .offer .container .offer-items {
-  padding: 15px;
+main .offer-section .offer .container .container-inside {
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-main .offer-section .offer .container .offer-items p {
-  padding: 40px 0;
+main .offer-section .offer .container .container-inside .text-box .offer-h3 {
+  position: relative;
   color: #585658;
+  padding-bottom: 45px;
+}
+main .offer-section .offer .container .container-inside .text-box .offer-h3::after {
+  position: absolute;
+  content: "";
+  width: 250px;
+  height: 150px;
+  bottom: -131px;
+  left: -75px;
+  -webkit-clip-path: polygon(30% 0, 61% 0, 44% 4%, 18% 7%);
+          clip-path: polygon(30% 0, 61% 0, 44% 4%, 18% 7%);
+  background-color: #56f000;
+  z-index: -1;
+  bottom: -102px;
+  left: -50px;
+}
+main .offer-section .offer .container .container-inside .items-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+main .offer-section .offer .container .container-inside .items-box .box {
+  width: 220px;
+  height: 220px;
+  margin: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+main .offer-section .offer .container .container-inside .items-box .box .icon {
+  width: 120px;
+  height: 120px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.1490196078);
+  border-radius: 50%;
+  box-shadow: 0px 6px 10px #585658;
+  transition: all 0.3s;
+  border: 2px solid #585658;
+}
+main .offer-section .offer .container .container-inside .items-box .box .icon .icon-item {
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s;
+}
+main .offer-section .offer .container .container-inside .items-box .box .text {
+  text-align: center;
+  color: #585658;
+  transition: all 0.9s;
+  text-transform: uppercase;
+}
+main .offer-section .offer .container .container-inside .items-box .box:hover .icon {
+  background-color: rgba(221, 221, 221, 0.6745098039);
+}
+main .offer-section .offer .container .container-inside .items-box .box:hover .icon-item {
+  transform: scale(0.8);
+}
+main .offer-section .offer .container .container-inside .items-box .box:hover .text {
+  color: #56f000;
+}
+main .offer-section .offer-items {
+  padding: 0px 12px 120px 12px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr 190px);
+  gap: 20px 20px;
+  justify-content: center;
+  text-align: center;
+  color: #585658;
+}
+main .offer-section .offer-items .offer-item1 {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  margin-top: 90px;
+}
+main .offer-section .offer-items .offer-item1 p {
+  color: #585658;
+  line-height: 28px;
+  position: relative;
+}
+main .offer-section .offer-items .offer-item2 {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  background-image: url(../img/offer/session1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-position: 50% 60%;
+  border-radius: 35px;
+  box-shadow: 0px 6px 10px #585658;
+}
+main .offer-section .offer-items .offer-item3 {
+  grid-column: 1/2;
+  grid-row: 4/5;
+  background-image: url(../img/offer/new-style2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-position: 70% 40%;
+  border-radius: 35px;
+  box-shadow: 0px 6px 10px #585658;
+}
+main .offer-section .offer-items .offer-item4 {
+  margin-top: 80px;
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+main .offer-section .offer-items .offer-item4 p {
+  color: #585658;
+  line-height: 28px;
+  position: relative;
+}
+main .offer-section .offer-items .offer-item4 p a {
+  text-decoration: none;
+}
+main .offer-section .offer-items .offer-item4 p .CTA-txt {
+  color: #585658;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+main .offer-section .offer-items .offer-item4 p .CTA-txt:hover {
+  color: #56f000;
 }
 main .gallery-section {
   position: relative;
@@ -478,8 +607,7 @@ main .gallery-section .gallery .container .head-br::after {
   border-bottom: 30px solid #56f000;
   z-index: -1;
   border-radius: 20px;
-  bottom: 35px;
-  right: 510px;
+  bottom: 32px;
 }
 main .gallery-section .gallery .container .gallery-items {
   width: 100%;
@@ -514,6 +642,8 @@ main .gallery-section .gallery .container .gallery-items .mobile-gallery .img-it
 }
 main .gallery-section .gallery .container .gallery-items .mobile-gallery .img-item:hover {
   transform: scale(1.2);
+  border: 2px solid #eee;
+  box-shadow: 1px 2px 16px 3px #eee;
 }
 main .gallery-section .gallery .container .gallery-items .mobile-gallery .item1 {
   background-image: url(../img/gallery/1.jpg);
@@ -659,7 +789,7 @@ main .casting-section .casting .container .casting-offer .offer-text ul li {
 }
 main .casting-section .casting .container .casting-offer .offer-text h4 {
   width: 100%;
-  padding: 20px 0 12px 0px;
+  padding: 60px 0 12px 0px;
 }
 main .casting-section .casting .container .casting-offer .offer-img {
   display: flex;
@@ -695,7 +825,7 @@ main .casting-section .casting .container .offer-explain .h3-animation {
   position: relative;
   padding: 35px;
   border-radius: 50%;
-  width: 260px;
+  width: 280px;
   height: 60px;
   border: 2px solid #585658;
   display: flex;
@@ -717,7 +847,7 @@ main .casting-section .casting .container .offer-explain .h3-animation::after {
   padding: 33px;
   top: 0;
   left: 0;
-  width: 260px;
+  width: 280px;
   height: 60px;
   border-radius: 50%;
   border: 2px solid #585658;
@@ -730,7 +860,7 @@ main .casting-section .casting .container .offer-explain .h3-animation::before {
   padding: 33px;
   top: 0;
   left: 0;
-  width: 260px;
+  width: 280px;
   height: 60px;
   border-radius: 50%;
   border: 2px solid #585658;
@@ -884,17 +1014,16 @@ main .casting-section .casting .container .offer-explain .pictures-container .bo
 main .casting-section .casting .container .offer-explain .pictures-container .box-img::after {
   position: absolute;
   content: "";
-  width: 0px;
-  height: 0px;
+  width: 5px;
+  height: 5px;
   background-color: #9d9d9d;
-  bottom: -90px;
-  left: -25px;
-  transition: all 0.4s;
+  bottom: -8px;
+  left: 150px;
+  transition: all 0.5s;
   border-radius: 50%;
 }
 main .casting-section .casting .container .offer-explain .pictures-container .box-img:hover::after {
-  width: 350px;
-  height: 350px;
+  transform: scale(80);
 }
 main .casting-section .casting .container .offer-explain .send-offer {
   margin-bottom: 60px;
@@ -943,8 +1072,7 @@ main .contact-section .contact .container .head-br::after {
   border-bottom: 30px solid #56f000;
   z-index: -1;
   border-radius: 20px;
-  bottom: 30px;
-  right: 540px;
+  bottom: 28px;
 }
 main .contact-section .contact .container .contact-items {
   width: 100%;
@@ -1048,9 +1176,11 @@ main .contact-section .contact .container .contact-items .form-box {
   border-radius: 20px;
 }
 main .contact-section .contact .container .contact-items .form-box .container-padding {
+  position: relative;
   padding: 8px;
 }
 main .contact-section .contact .container .contact-items .form-box .container-padding .h3header {
+  position: relative;
   display: flex;
   justify-content: center;
   color: #ffffff;
@@ -1062,14 +1192,11 @@ main .contact-section .contact .container .contact-items .form-box .container-pa
   content: "";
   width: 250px;
   height: 150px;
-  bottom: -131px;
-  left: -75px;
+  bottom: -128px;
   -webkit-clip-path: polygon(30% 0, 61% 0, 44% 4%, 18% 7%);
           clip-path: polygon(30% 0, 61% 0, 44% 4%, 18% 7%);
   background-color: #56f000;
   z-index: -1;
-  bottom: 326px;
-  left: 530px;
 }
 main .contact-section .contact .container .contact-items .form-box .container-padding .form-items form {
   display: flex;
@@ -1082,12 +1209,15 @@ main .contact-section .contact .container .contact-items .form-box .container-pa
 main .contact-section .contact .container .contact-items .form-box .container-padding .form-items form .mail {
   padding: 6px;
   max-width: 400px;
+  font-size: 14px;
 }
 main .contact-section .contact .container .contact-items .form-box .container-padding .form-items form .message {
+  font-family: "Open Sans", sans-serif;
   padding: 6px;
   height: 80px;
   resize: none;
   margin-bottom: 15px;
+  font-size: 14px;
 }
 main .contact-section .contact .container .contact-items .form-box .container-padding .form-items form .button-form {
   position: relative;
@@ -1453,6 +1583,76 @@ footer .created-by .created-box p .btn-footer:hover::after {
   footer .container .created-by {
     padding-top: 0px;
   }
+  main .offer-section {
+    position: relative;
+    z-index: 10;
+  }
+  main .offer-section .offer-items {
+    padding: 100px 12px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-rows: repeat(2, minmax(350px, 1fr));
+    gap: 100px 30px;
+    grid-auto-flow: column;
+  }
+  main .offer-section .offer-items .offer-item1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  main .offer-section .offer-items .offer-item1 p {
+    color: #585658;
+    line-height: 28px;
+  }
+  main .offer-section .offer-items .offer-item2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-image: url(../img/offer/session1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-position: 50% 70%;
+    border-radius: 35px;
+    box-shadow: 0px 6px 10px #585658;
+  }
+  main .offer-section .offer-items .offer-item3 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-image: url(../img/offer/new-style2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-position: 50% 70%;
+    border-radius: 35px;
+    box-shadow: 0px 6px 10px #585658;
+  }
+  main .offer-section .offer-items .offer-item4 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  main .offer-section .offer-items .offer-item4 p {
+    color: #585658;
+    line-height: 28px;
+    position: relative;
+  }
+  main .offer-section .offer-items .offer-item4 p a {
+    text-decoration: none;
+  }
+  main .offer-section .offer-items .offer-item4 p .CTA-txt {
+    color: #585658;
+    font-weight: bold;
+    transition: all 0.3s;
+  }
+  main .offer-section .offer-items .offer-item4 p .CTA-txt:hover {
+    color: #56f000;
+  }
+  main .offer-section .offer-items p {
+    padding: 40px 0;
+    color: #585658;
+  }
   main .casting-section {
     scroll-margin-top: 49px;
   }
@@ -1603,6 +1803,24 @@ footer .created-by .created-box p .btn-footer:hover::after {
     color: #585658;
     font-size: 18px;
   }
+  main .offer-section .bg-dollar {
+    display: block;
+    position: absolute;
+    top: 36%;
+    right: 180px;
+    width: 160px;
+    height: 150px;
+    opacity: 0.08;
+    z-index: -100;
+    animation: rotate-left 40s infinite linear;
+    z-index: -10;
+  }
+  main .offer-section .left {
+    right: 0;
+    left: 180px;
+    top: 28%;
+    animation: rotate-right 40s infinite linear;
+  }
   main .casting-section {
     position: relative;
     scroll-margin-top: 49px;
@@ -1631,6 +1849,24 @@ footer .created-by .created-box p .btn-footer:hover::after {
   }
 }
 @media (min-width: 1200px) {
+  main .offer-section .bg-dollar {
+    display: block;
+    position: absolute;
+    top: 42%;
+    right: 180px;
+    width: 160px;
+    height: 150px;
+    opacity: 0.08;
+    z-index: -100;
+    animation: rotate-left 40s infinite linear;
+    z-index: -10;
+  }
+  main .offer-section .left {
+    right: 0;
+    left: 180px;
+    top: 32%;
+    animation: rotate-right 40s infinite linear;
+  }
   main .casting-section {
     scroll-margin-top: 49px;
   }
